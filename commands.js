@@ -1174,7 +1174,7 @@ var commands = exports.commands = {
 		var etags = '</font></strong>'
 		var targetid = toUserid(user);
 
-		if(target){
+		if(!user.muted && target){
 			var tar = toUserid(target);
 			var targetUser = Users.get(tar);
 				if(user.can('poof', targetUser)){
@@ -3405,18 +3405,9 @@ function removeIpBan(target, callback) {
 
 function escapeHTML(target) {
 	if (!target) return false;
-<<<<<<< HEAD
-	target = target.replace(/&(?!\w+;)/g, '&amp;')
-  	target = target.replace(/</g, '&lt;')
-    target = target.replace(/>/g, '&gt;')
-   	target = target.replace(/"/g, '&quot;');
-   	return target;
-}
-=======
 	target = target.replace(/&(?!\w+;)/g, '&amp;');
 	target = target.replace(/</g, '&lt;');
 	target = target.replace(/>/g, '&gt;');
 	target = target.replace(/"/g, '&quot;');
 	return target;
 }
->>>>>>> eddb53e... Tidy up that weird spacing.
