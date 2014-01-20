@@ -1222,12 +1222,15 @@ var commands = exports.commands = {
 	cpoof: function(target, room, user){
 		if(!user.can('broadcast')) return this.sendReply('/cpoof - Access Denied');
 		if (!target) return this.sendReply('Usage: /cpoof [message]');
+		if (user.locked) return this.sendReply('You can\'t poof while locked.');
+		muted = Object.keys(user.mutedRooms);
+		for (var u in muted) if (muted[u] == 'lobby') return this.sendReply('You can\'t poof while muted');
 	
 		if(poofeh) {
 			var btags = '<strong><font color="'+hashColor(Math.random().toString())+'" >';
 			var etags = '</font></strong>'
 			target = escapeHTML(target);
-			Rooms.rooms.lobby.addRaw(btags + '~~ '+user.name+' '+target+'! ~~' + etags);
+			Rooms.rooms.lobby.addRaw(btags + '~~ '+escapeHTML(user.name)+' '+target+'! ~~' + etags);
 			this.logModCommand(user.name + ' used a custom poof message: \n "'+target+'"');
 			user.disconnectAll();
 		}else{
