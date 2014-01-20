@@ -1174,7 +1174,7 @@ var commands = exports.commands = {
 		var etags = '</font></strong>'
 		var targetid = toUserid(user);
 
-		if(!user.muted && target){
+		if(target){
 			var tar = toUserid(target);
 			var targetUser = Users.get(tar);
 				if(user.can('poof', targetUser)){
