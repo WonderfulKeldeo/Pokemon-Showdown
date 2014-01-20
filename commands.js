@@ -1168,11 +1168,13 @@ var commands = exports.commands = {
 	flee: 'd',
 	d: function(target, room, user){
 		if(room.id !== 'lobby') return false;
+		muted = Object.keys(user.mutedRooms);
+		for (var u in muted) if (muted[u] == 'lobby') return this.sendReply('You can\'t poof while muted');
 		var btags = '<strong><font color='+hashColor(Math.random().toString())+'" >';
 		var etags = '</font></strong>'
 		var targetid = toUserid(user);
 
-		if(!user.muted && target){
+		if(target){
 			var tar = toUserid(target);
 			var targetUser = Users.get(tar);
 				if(user.can('poof', targetUser)){
@@ -1188,7 +1190,7 @@ var commands = exports.commands = {
 					return this.sendReply('/poof target - Access denied.');
 				}
 			}
-		if(poofeh && !user.muted && !user.locked){
+		if(poofeh && !user.locked){
 			Rooms.rooms.lobby.addRaw(btags + getRandMessage(user)+ etags);
 			user.disconnectAll();
 		} else {
