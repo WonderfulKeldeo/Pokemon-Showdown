@@ -241,45 +241,46 @@ var commands = exports.commands = {
 	 * Informational commands
 	 *********************************************************/
 
-	regdate: function(target, room, user, connection) {
+	regdate: function(target, room, user, connection) { 
 		if (!this.canBroadcast()) return;
-		if (!target || target == "." || target == "," || target == "'") return this.sendReply('/regdate - Please specify a valid username.'); //temp fix for symbols that break the command
 		var username = target;
-		target = target.replace(/\s+/g, '');
+		var userid = toUserid(target);
+		username = escapeHTML(username);
+		if (userid == '') return this.sendReplyBox(username+' is not a valid username.');
 		var util = require("util"),
-    	http = require("http");
+		http = require("http");
 
 		var options = {
-    		host: "www.pokemonshowdown.com",
-    		port: 80,
-    		path: "/forum/~"+target
+			host: "www.pokemonshowdown.com",
+			port: 80,
+			path: "/forum/~"+userid
 		};
 
 		var content = "";
 		var self = this;
 		var req = http.request(options, function(res) {
 
-		    res.setEncoding("utf8");
-		    res.on("data", function (chunk) {
-	        content += chunk;
-    		});
-	    	res.on("end", function () {
-			content = content.split("<em");
-			if (content[1]) {
-				content = content[1].split("</p>");
-				if (content[0]) {
-					content = content[0].split("</em>");
-					if (content[1]) {
-						regdate = content[1];
-						data = username+' was registered on'+regdate+'.';
+			res.setEncoding("utf8");
+			res.on("data", function (chunk) {
+				content += chunk;
+			});
+			res.on("end", function () {
+				content = content.split("<em");
+				if (content[1]) {
+					content = content[1].split("</p>");
+					if (content[0]) {
+						content = content[0].split("</em>");
+						if (content[1]) {
+							regdate = content[1];
+							data = username+' was registered on'+regdate+'.';
+						}
 					}
 				}
-			}
-			else {
-				data = username+' is not registered.';
-			}
-			self.sendReplyBox(data);
-		    });
+				else {
+					data = username+' is not registered.';
+				}
+				self.sendReplyBox(data);
+			});
 		});
 		req.end();
 	},
@@ -1449,3 +1450,12 @@ var commands = exports.commands = {
 	},
 
 };
+
+function escapeHTML(target) {
+	if (!target) return false;
+	target = target.replace(/&(?!\w+;)/g, '&amp;')
+	target = target.replace(/</g, '&lt;')
+	target = target.replace(/>/g, '&gt;')
+	target = target.replace(/"/g, '&quot;');
+	return target;
+}
