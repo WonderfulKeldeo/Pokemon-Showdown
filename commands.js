@@ -630,6 +630,7 @@ var commands = exports.commands = {
 	malk: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer: <font color="#B7C21E"><b>Malk</b></font><br />' +
+						'<center>Types: Champion(OU)<br />' +
 						'<center>Signature Pokemon: <b>Zebstrika</b><br />' +
 						'<center>Catchphrase:idk about catchphrase though<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/523.gif">');
@@ -644,7 +645,7 @@ var commands = exports.commands = {
 	},
 
 	skymin: 'sky',
-		sky: function (target, room, user) {
+	sky: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox ('<center>Trainer: <font color="#199461"><b>Skymin</b></font><br />' +
 						'<center>Signature Pokemon: <font color="#3CC977"><b>Shaymin-Sky</b></font><br />' +
@@ -760,7 +761,7 @@ var commands = exports.commands = {
 	tl: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer: <font color="#776C08"><b>The TurtleLord</b></font><br />' +
-						'<center>Types: Champion(OU), Water(UU), Poison(RU E4)<br />' +
+						'<center>Types: Ground(OU), Water(UU), Poison(RU E4)<br />' +
 						'<center>Signature Pokemon: <font color="green"><b>Torterra</b></font><br />' +
 						'<center>Catchphrase:my turtles will smash yo\' ass<br />' +
 						'<center><a href="https://www.youtube.com/watch?v=bojx9BDpJks"><img src="http://www.smogon.com/download/sprites/bwmini/389.gif"></a>');
