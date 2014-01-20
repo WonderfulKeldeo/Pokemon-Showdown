@@ -102,7 +102,7 @@ var commands = exports.commands = {
 			pokemonNames.push(pokemon.species);
 		}
 		league.write('\n'+user.name+'\'s team: '+pokemonNames.join(', '));
-		return this.sendReply('Your team of '+pokemonNames.join(', ')+' has been submitted successfully.');
+		return this.sendReply('Your team of '+pokemonNames.join(', ')+' has been submitted successfully. You may now challenge Gym Leaders.');
 	},
 
 	registerleagueuu: function(target, room, user) {
@@ -132,7 +132,7 @@ var commands = exports.commands = {
 			pokemonNames.push(pokemon.species);
 		}
 		leagueuu.write('\n'+user.name+'\'s team: '+pokemonNames.join(', '));
-		return this.sendReply('Your team of '+pokemonNames.join(', ')+' has been submitted successfully.');
+		return this.sendReply('Your team of '+pokemonNames.join(', ')+' has been submitted successfully. You may now challenge Gym Leaders.');
 	},
 
 	viewleague: function(target, room, user) {
@@ -158,21 +158,21 @@ var commands = exports.commands = {
 		if (!operator) {
 			return this.sendReply('/math [number] [operator] [number] OR [number] [operator] - Calculates two numbers using the operator.');
 		}
-		if (operator === '*') {
+		if (operator === '*' || operator === 'x') {
 			var multi = a * b;
-			return this.sendReplyBox("<b>"+a+"</b> multiplied by <b>"+b+"</b> is <b>"+multi+"</b>");
+			return this.sendReplyBox('<b>'+a+'</b> multiplied by <b>'+b+'</b> is <b>'+multi+'</b>');
 		} else if (operator === '+') {
 			var add = parseInt(a) + parseInt(b);
-			return this.sendReplyBox("<b>"+a+"</b> plus <b>"+b+"</b> is <b>"+add+"</b>");
+			return this.sendReplyBox('<b>'+a+'</b> plus <b>'+b+'</b> is <b>'+add+'</b>');
 		} else if (operator === '-') {
 			var minus = a - b;
-			return this.sendReplyBox("<b>"+a+"</b> minus <b>"+b+"</b> is <b>"+minus+"</b>");
+			return this.sendReplyBox('<b>'+a+'</b> minus <b>'+b+'</b> is <b>'+minus+'</b>');
 		} else if (operator === '/') {
 			var divide = a / b;
-			return this.sendReplyBox("<b>"+a+"</b> divided by <b>"+b+"</b> is <b>"+divide+"</b>");
+			return this.sendReplyBox('<b>'+a+'</b> divided by <b>'+b+'</b> is <b>'+divide+'</b>');
 		} else if (operator === '^') {
 			var square = Math.pow(a,b);
-			return this.sendReplyBox("<b>"+a+"</b> to the power of <b>"+b+"</b> is <b>"+square+"</b>");
+			return this.sendReplyBox('<b>'+a+'</b> to the power of <b>'+b+'</b> is <b>'+square+'</b>');
 		} else if (operator === 'sr' || operator === 'squareroot') {
 			var sqrt = Math.sqrt(a);
 			return this.sendReplyBox("The square root of <b>"+a+"</b> is <b>"+sqrt+"</b>");
@@ -620,7 +620,7 @@ var commands = exports.commands = {
 
 	boss: function(target, room, user) {
 		if(!this.canBroadcast()) return;
-		this.sendReplyBox('<center>Trainer: <font color="#1FA352"><b>Gym Le@der Boss</b></font><br />' +
+		this.sendReplyBox('<center>Trainer: <font color="#72BA0D"><b>Boss</b></font><br />' +
 						'<center>Types: Water(OU E4)<br />' +
 						'<center>Signature Pokemon: <font color="blue"><b>Kingdra</b></font><br />' +
 						'<center>Catchphrase: The one who is prepared is the one who wins.<br />' +
@@ -670,7 +670,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer:<font color="#2610B7"><b>blizzardq</b></font><br />' +
 						'<center>Signature Pokemon: <font color="blue"><b>Keldeo</b></font><br />' +
 						'<center>Catchphrase: こんにちは.<br />' +
-						'<center>PM me command ideas. I am a coder for Amethyst. <br />' +
+						'<center>PM me server/command ideas. I am a coder for Amethyst. <br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/647.gif">');
 	},
 
@@ -679,7 +679,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer:<font color="#7EC60C"><b>brooksyy</b></font><br />' +
 						'<center>Types: Dragon(OU)<br />' +
 						'<center>Signature Pokemon: <b>Kyurem-Black</b><br />' +
-						'<center>Catchphrase: Most beautiful award winner 2013<br />' +
+						'<center>Catchphrase: Most beautiful award winner 2014<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/646-b.gif">');
 	},
 
@@ -693,18 +693,9 @@ var commands = exports.commands = {
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/94.gif">');
 	},
 
-
-	wise: function(target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<center>Trainer:<font color="#AC6116"><b>wisecarver</b></font><br />' +
-						'<center>Signature Pokemon: <b>Mawile</b><br />' +
-						'<center>Catchphrase: "Every strike brings me closer to my next homerun" ~Babe Ruth<br />' +
-						'<center><img src="http://www.smogon.com/download/sprites/bwmini/303.gif">');
-	},
-
 	absol: function(target, room, user) {
 		if(!this.canBroadcast()) return;
-		this.sendReplyBox('<center>Trainer:<font color="#15A7AC"><b>Absol-utelyEmily</b></font><br />' +
+		this.sendReplyBox('<center>Trainer:<font color="#741E99"><b>Absol-utelyEmily</b></font><br />' +
 						'<center>Types: Normal(OU)<br />' +
 						'<center>Signature Pokemon: <font color="red"><b>Porygon2</b></font><br />' +
 						'<center>Catchphrase: This thing is Absol-utely one bulky mofo<br />' +
@@ -785,6 +776,7 @@ var commands = exports.commands = {
 	},
 
 	clam: 'hc',
+	bugmaster: 'hc',
 	hc: function(target, room, user) {
 		if(!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer: <font color="#1B7E15"><b>hostageclam</b></font><br />' +
@@ -838,18 +830,10 @@ var commands = exports.commands = {
 	if (!this.canBroadcast()) return;
 	return this.sendReplyBox('<center>Trainer:<font color="#985B06"><b>CrazyClown94</b></font><br />' +
 							 '<center>Types: Psychic(UU)<br />' +
-							 '<center>Badge: The Crazy Badge.<br />' +
+							//'<center>Badge: The Crazy Badge.<br />' +
 							 '<center>Signature Pokemon:<font color="red"><b>Medicham</b></font><br />' +
 							 '<center>Catchphrase: Puppies eat waffles for breakfast<br />' +
 							 '<center><a href="http://www.youtube.com/watch?v=Iyv905Q2omU"><img src="http://www.smogon.com/download/sprites/bwmini/308.gif"></a>');
-	},
-	
-	cuddly: function(target, room, user) {
-	if (!this.canBroadcast()) return;
-	this.sendReplyBox('<center>Trainer:<font color="#0639BC"><b>Cuddly</b></font><br />' +
-					  '<center>Signature Pokemon:<font color="green"><b>Golurk</b></font><br />' +
-					  '<center>Catchphrase: I....I am the monument to all your sins<br />' +
-					  '<center><img src="http://www.smogon.com/download/sprites/bwmini/623.gif">');
 	},
 
 	energ: 'energ218',
@@ -863,12 +847,11 @@ var commands = exports.commands = {
 						'<center><a href="https://www.youtube.com/watch?v=AqPpqALiMMQ"><img src="http://www.smogon.com/download/sprites/bwmini/418.gif"></a>');
 	},
 
-
 	zact94: 'zac',
 	zac: function(target, room, user) {
 		if(!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer: <font color="#2723A4"><b>ZacT94</b></font><br />' +
-						'<center>Types: Ghost(UU), Noraml(RU)<br />' +
+						'<center>Types: Ghost(UU), Normal(RU)<br />' +
 						'<center>Signature Pokemon: <font color="#D9D50D"><b>Cofagrigus</b></font><br />' +
 						'<center>Catchphrase:Damn it my cat won\'t stop walking on my keyboard!<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/563.gif">');
@@ -886,16 +869,6 @@ var commands = exports.commands = {
 					  '<center>252+ SpA Machamp Focus Blast vs. 4 HP / 0 SpD Piiiikachuuu: 238-282 (112.2 - 133%) -- guaranteed OHKO<br />' +
 					  '<center><img src="http://www.smogon.com/download/sprites/bwmini/25.gif">');
 	},
-
-	/* silver: 'hope',
-	hope: function(target, room, user) {
-		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<center>Trainer: <font color="#92C51B"><b>Vanitаѕ</b></font>(plus many other alts)<br />' +
-					'<center>Types: Flying(OU)<br />' +
-					'<center>Signature Pokemon: <font color="#265892"><b>AOrtega</b></font><br />' +
-					'<center>Catchphrase:veni, vidi, vici.</br />' +
-					'<center><img src="http://www.smogon.com/download/sprites/bwmini/428.gif">');
-	}, */
 
 	league: 'leagueintro',
 	leagueintro: function(target, room, user) {
@@ -1161,7 +1134,7 @@ var commands = exports.commands = {
 	ktm: 'mail',
 	mail: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<font size=3><b>Kill the Mailman</b></font><br><font size=2>by platinumCheesecake</font><br>A list of the rules for Kill the Mailman can be found <a href="http://amethystserver.freeforums.net/thread/77/mailman-tier">here</a>.<br />Contact piiiikachuuu with any problems.');
+		this.sendReplyBox('<font size=3><b>Kill the Mailman</b></font><br><font size = 2>by platinumCheesecake</font><br>A list of the rules for Kill the Mailman can be found <a href="http://amethystserver.freeforums.net/thread/77/mailman-tier">here</a>.<br />Contact piiiikachuuu with any problems.');
 	},
 
 	poof: 'd',
@@ -1992,7 +1965,7 @@ var commands = exports.commands = {
 	},
 
 	b: 'ban',
-	barn: 'ban',
+	hammer: 'ban',
 	ban: function(target, room, user, connection, cmd) {
 		if (!target) return this.parse('/help ban');
 
@@ -2012,8 +1985,8 @@ var commands = exports.commands = {
 		}
 
 		targetUser.popup(user.name+" has banned you." + (config.appealurl ? ("  If you feel that your banning was unjustified you can appeal the ban:\n" + config.appealurl) : "") + "\n\n"+target);
-		if (cmd === 'barn') {
-			this.addModCommand(""+targetUser.name+" was barned by "+user.name+" for so and so reason." + (target ? " (" + target + ")" : ""), ' ('+targetUser.latestIp+')');
+		if (cmd === 'hammer') {
+			this.addModCommand(""+targetUser.name+" was hit by "+user.name+"'s Ban Hammer. " + (target ? " (" + target + ")" : ""), ' ('+targetUser.latestIp+')');
 		}else{
 			this.addModCommand(""+targetUser.name+" was banned by "+user.name+"." + (target ? " (" + target + ")" : ""), ' ('+targetUser.latestIp+')');
 		}
