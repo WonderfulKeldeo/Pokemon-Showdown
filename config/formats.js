@@ -17,7 +17,6 @@ exports.Formats = [
 		section: "Custom Metagames",
 
 		mod: 'sketchmons',
-		searchShow: false,
 		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
 		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite']
 	},
