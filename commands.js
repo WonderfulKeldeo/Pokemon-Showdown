@@ -1140,7 +1140,7 @@ var commands = exports.commands = {
 
 	sketch: function(target, room, user) {	
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<font size=3><b>SketchMons</b></font><br><font size=2>By Orivexes.</font><br>This metagame is simple: Every Pokemon learns every move. Good luck.');
+		this.sendReplyBox('<font size=3><b>SketchMons</b></font><br><font size=2>By Orivexes.</font><br>This metagame is simple: Every Pokemon learns Sketch once. Good luck.');
 	},	
 	poof: 'd',
 	flee: 'd',
