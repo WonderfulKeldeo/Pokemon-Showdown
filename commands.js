@@ -1138,6 +1138,10 @@ var commands = exports.commands = {
 		this.sendReplyBox('<font size=3><b>Kill the Mailman</b></font><br><font size = 2>by platinumCheesecake</font><br>A list of the rules for Kill the Mailman can be found <a href="http://amethystserver.freeforums.net/thread/77/mailman-tier">here</a>.<br />Contact piiiikachuuu with any problems.');
 	},
 
+	sketch: function(target, room, user) {	
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('<font size=3><b>SketchMons</b></font><br><font size=2>By Orivexes.</font><br>This metagame is simple: Every Pokemon learns every move. Good luck.');
+	},	
 	poof: 'd',
 	flee: 'd',
 	d: function(target, room, user){
