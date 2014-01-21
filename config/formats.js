@@ -12,9 +12,9 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Team Preview', 'Standard Ubers', 'Tier Clash Clause'],
 		banlist: []
 	},
-	{
+		{
 		name: "Sketchmons",
-		section: "Custom Metagames",
+		section: "Amethyst Tiers",
 
 		mod: 'sketchmons',
 		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
