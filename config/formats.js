@@ -13,6 +13,15 @@ exports.Formats = [
 		banlist: []
 	},
 	{
+		name: "Sketchmons",
+		section: "Custom Metagames",
+
+		mod: 'sketchmons',
+		searchShow: false,
+		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
+		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite']
+	},
+	{
 		name: "Mixed Tier",
 		section: "Amethyst Metas",
 
