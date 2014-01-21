@@ -3384,8 +3384,4 @@ function escapeHTML(target) {
 	target = target.replace(/>/g, '&gt;');
 	target = target.replace(/"/g, '&quot;');
 	return target;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> eddb53e... Tidy up that weird spacing.
