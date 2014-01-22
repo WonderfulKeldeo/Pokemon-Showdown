@@ -151,6 +151,9 @@ exports.BattleAliases = {
 	"ttar": "Tyranitar",
 	"volc": "Volcarona",
 	"zam": "Alakazam",
+	"gourd": "Gourgeist",
+	"crumbler": "Aegislash",
+	"crumblerfriendchesnot": "Chesnaught",
 
 	// moves
 	"bpass": "Baton Pass",
