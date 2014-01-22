@@ -14,7 +14,7 @@ exports.Formats = [
 	},
 		{
 		name: "Sketchmons",
-		section: "Amethyst Tiers",
+		section: "Amethyst Meta",
 
 		mod: 'sketchmons',
 		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
@@ -528,7 +528,7 @@ exports.Formats = [
 		]
 	},
 	{
-		name: "1v1",
+		name: "1vs1",
 		section: 'Other Metagames',
 
 		onBegin: function() {
