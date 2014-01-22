@@ -122,6 +122,8 @@ exports.BattleAliases = {
 	"chandy": "Chandelure",
 	"conk": "Conkeldurr",
 	"chomp": "Garchomp",
+	"crumbler": "Aegislash",
+	"crumblerfriendchesnot": "Chesnaught",
 	"dnite": "Dragonite",
 	"ferro": "Ferrothorn",
 	"forry": "Forretress",
@@ -129,6 +131,7 @@ exports.BattleAliases = {
 	"garde": "Gardevoir",
 	"gastro": "Gastrodon",
 	"gene": "Genesect",
+	"gourd": "Gourgeist",
 	"hippo": "Hippowdon",
 	"kanga": "Kangaskhan",
 	"kang": "Kangaskhan",
@@ -151,10 +154,7 @@ exports.BattleAliases = {
 	"ttar": "Tyranitar",
 	"volc": "Volcarona",
 	"zam": "Alakazam",
-	"gourd": "Gourgeist",
-	"crumbler": "Aegislash",
-	"crumblerfriendchesnot": "Chesnaught",
-
+	
 	// moves
 	"bpass": "Baton Pass",
 	"cc": "Close Combat",
