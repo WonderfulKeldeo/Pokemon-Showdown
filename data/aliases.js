@@ -133,6 +133,7 @@ exports.BattleAliases = {
 	"gene": "Genesect",
 	"gourd": "Gourgeist",
 	"hippo": "Hippowdon",
+	"imanalt": "Rhydon",
 	"kanga": "Kangaskhan",
 	"kang": "Kangaskhan",
 	"kyub": "Kyurem-Black",
