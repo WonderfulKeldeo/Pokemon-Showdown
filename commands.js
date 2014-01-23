@@ -576,7 +576,7 @@ var commands = exports.commands = {
 	zuku: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox ('<center>Trainer:<font color="#9A9C26"><b>Zukushiku</b></font><br />' +
-                   '<center>Types:Fairy(OU E4), Dark (UU E4), Rock (RU E4), Grass(NU)<br />' +
+                   '<center>Types:Bug(OU E4), Dark(UU E4), Rock(RU E4), Grass(NU)<br />' +
                    '<center>Signature Pokemon: <font color="red"><b>Victini</b></font><br />' +
                    '<center>Catchphrase: I\'ll swallow swords spit up my pride, I follow through again this time. I\'ll be just fine...<br />' +
                    '<center><img src="http://www.smogon.com/download/sprites/bwmini/494.gif">');
@@ -630,7 +630,6 @@ var commands = exports.commands = {
 	malk: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer: <font color="#B7C21E"><b>Malk</b></font><br />' +
-						'<center>Types: Champion(OU)<br />' +
 						'<center>Signature Pokemon: <b>Zebstrika</b><br />' +
 						'<center>Catchphrase:idk about catchphrase though<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/523.gif">');
@@ -699,7 +698,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer:<font color="#741E99"><b>Absol-utelyEmily</b></font><br />' +
 						'<center>Types: Normal(OU)<br />' +
 						'<center>Signature Pokemon: <font color="red"><b>Porygon2</b></font><br />' +
-						'<center>Catchphrase: This thing is Absol-utely one bulky mofo<br />' +
+						'<center>Catchphrase: I saw a movie about BEAVERS.... it was DAM good.<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/233.gif">');
 	},
 
@@ -732,7 +731,7 @@ var commands = exports.commands = {
 	dg: function(target, room, user) {
 		if(!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer: <font color="#0C8334"><b>Dark Girafarig</b></font><br />' +
-						'<center>Types: Steel (OU E4), Water(RU), Psychic(NU E4)<br />' +
+						'<center>Types: Fighting(OU), Water(RU), Psychic(NU E4)<br />' +
 						'<center>Signature Pokemon: <font color="#C11FA9"><b>Mew</b></font><br />' +
 						'<center>Catchphrase: How it all began... and how I\'ll begin again.<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/151.gif">');
@@ -740,7 +739,7 @@ var commands = exports.commands = {
 
 	sam: function (target, room, user) {
 	 	if (!this.canBroadcast()) return;
-      			this.sendReplyBox('<center>Trainer: <font color="#089D06"><b>Sam</b></font><br />' +
+      		this.sendReplyBox('<center>Trainer: <font color="#089D06"><b>Sam</b></font><br />' +
 						'<center>Types: Grass(OU)<br />' +
 						'<center>Signature Pokemon:<font color="green"><b>Breloom</b></font><br />' +
 						'<center>Catchphrase:A Thousand Die as a Million are born<br />' +
@@ -865,7 +864,7 @@ var commands = exports.commands = {
 	aortega: function(target, room, user) {
 			if(!this.canBroadcast()) return;
 			this.sendReplyBox('<center>Trainer:<font color="#3B2692"><b>AOrtega</b></font><br />' +
-					  '<center>Types: Fighting(OU)<br />' +
+					  '<center>Types: Fighting(UU E4)<br />' +
 					  '<center>Signature Pokemon:<font color="#9C029C"><b>piiiikachuuu</b></font><br />' +
 					  '<center>252+ SpA Machamp Focus Blast vs. 4 HP / 0 SpD Piiiikachuuu: 238-282 (112.2 - 133%) -- guaranteed OHKO<br />' +
 					  '<center><img src="http://www.smogon.com/download/sprites/bwmini/25.gif">');
@@ -1140,7 +1139,7 @@ var commands = exports.commands = {
 
 	sketch: function(target, room, user) {	
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<font size=3><b>SketchMons</b></font><br><font size=2>By Orivexes.</font><br>This metagame is simple: Every Pokemon learns Sketch once. Good luck.');
+		this.sendReplyBox('<font size=3><b>Sketchmons</b></font><br><font size=2>By Orivexes</font><br>This metagame is simple: Every Pokemon learns Sketch once. Good luck.');
 	},	
 	poof: 'd',
 	flee: 'd',
