@@ -576,7 +576,7 @@ var commands = exports.commands = {
 	zuku: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox ('<center>Trainer:<font color="#9A9C26"><b>Zukushiku</b></font><br />' +
-                   '<center>Types:Bug(OU E4), Dark(UU E4), Rock(RU E4), Grass(NU)<br />' +
+                   '<center>Types: Fairy(OU E4), Dark(UU E4), Rock(RU E4), Grass(NU)<br />' +
                    '<center>Signature Pokemon: <font color="red"><b>Victini</b></font><br />' +
                    '<center>Catchphrase: I\'ll swallow swords spit up my pride, I follow through again this time. I\'ll be just fine...<br />' +
                    '<center><img src="http://www.smogon.com/download/sprites/bwmini/494.gif">');
