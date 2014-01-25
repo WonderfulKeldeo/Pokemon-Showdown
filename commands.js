@@ -693,15 +693,6 @@ var commands = exports.commands = {
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/94.gif">');
 	},
 
-	absol: function(target, room, user) {
-		if(!this.canBroadcast()) return;
-		this.sendReplyBox('<center>Trainer:<font color="#741E99"><b>Absol-utelyEmily</b></font><br />' +
-						'<center>Types: Normal(OU)<br />' +
-						'<center>Signature Pokemon: <font color="red"><b>Porygon2</b></font><br />' +
-						'<center>Catchphrase: I saw a movie about BEAVERS.... it was DAM good.<br />' +
-						'<center><img src="http://www.smogon.com/download/sprites/bwmini/233.gif">');
-	},
-
 	pierce: function(target, room, user) {
 		if(!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer:<font color="#C51BC0"><b>GymLe@derTouchMe</b></font><br />' +
