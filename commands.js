@@ -620,8 +620,8 @@ var commands = exports.commands = {
 
 	boss: function(target, room, user) {
 		if(!this.canBroadcast()) return;
-		this.sendReplyBox('<center>Trainer: <font color="#72BA0D"><b>Boss</b></font><br />' +
-						'<center>Types: Water(OU E4)<br />' +
+		this.sendReplyBox('<center>Trainer: <font color="#62DD03"><b>Boss</b></font><br />' +
+						'<center>Types: Champion(OU), Water(OU E4)<br />' +
 						'<center>Signature Pokemon: <font color="blue"><b>Kingdra</b></font><br />' +
 						'<center>Catchphrase: The one who is prepared is the one who wins.<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/230.gif">');
@@ -1643,6 +1643,10 @@ var commands = exports.commands = {
 			user.nobland = true;
 			return connection.sendTo(target,'|noinit|joinfailed|WARNING: Adult content may be found in this room, join at your own risk.');
 		}
+		if (target.toLowerCase() == "sairasvan" && !user.saira) {
+			user.saira = true;
+			return connection.sendTo(target,'|noinit|joinfailed|WARNING: Adult content may be found in this room, join at your own risk.');
+		}
 		if (target.toLowerCase() == "pidovetrainingcenter" && !user.pidove) {
 			user.pidove = true;
 			return connection.sendTo(target,'|noinit|joinfailed|WARNING: Adult content may be found in this room, join at your own risk.');
@@ -1960,7 +1964,7 @@ var commands = exports.commands = {
 	},
 
 	b: 'ban',
-	hammer: 'ban',
+	bh: 'ban',
 	ban: function(target, room, user, connection, cmd) {
 		if (!target) return this.parse('/help ban');
 
@@ -1980,7 +1984,7 @@ var commands = exports.commands = {
 		}
 
 		targetUser.popup(user.name+" has banned you." + (config.appealurl ? ("  If you feel that your banning was unjustified you can appeal the ban:\n" + config.appealurl) : "") + "\n\n"+target);
-		if (cmd === 'hammer') {
+		if (cmd === 'bh') {
 			this.addModCommand(""+targetUser.name+" was hit by "+user.name+"'s Ban Hammer. " + (target ? " (" + target + ")" : ""), ' ('+targetUser.latestIp+')');
 		}else{
 			this.addModCommand(""+targetUser.name+" was banned by "+user.name+"." + (target ? " (" + target + ")" : ""), ' ('+targetUser.latestIp+')');
