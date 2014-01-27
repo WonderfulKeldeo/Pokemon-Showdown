@@ -594,7 +594,7 @@ var commands = exports.commands = {
 	mizud: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer: <font color="#C11FA9"><b>Mizu :D</b></font><br />' +
-                  '<center>Types: Flying(UU)<br />' +
+                  //'<center>Types: Flying(UU)<br />' +
                   '<center>Signaute Pokemon: <font color="#C11FA9"><b>Togekiss</b></font><br />' +
                   '<center>Catchphrase: /me glomps jd<br />' +
                   '<center><img src="http://www.smogon.com/download/sprites/bwmini/468.gif">');
@@ -672,6 +672,14 @@ var commands = exports.commands = {
 						'<center>Catchphrase: こんにちは.<br />' +
 						'<center>PM me server/command ideas. I am a coder for Amethyst. <br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/647.gif">');
+	},
+	mono: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('<center>Trainer: <font color="#72132F"><b>Pupitar21</b></font><br />' +
+				  '<center>Types: Fairy(OU)<br />' +
+				  '<center>Signature Pokemon: <font color="#C11FA9"><b>Sylveon</b></font><br />' +
+				  '<center>Catchphrase: Weaklies are stronger than Strongies obv<br />' +
+				  '<center><img src="http://www.serebii.net/pokedex-xy/icon/700.png">');
 	},
 
 	brook: function(target, room, user) {
