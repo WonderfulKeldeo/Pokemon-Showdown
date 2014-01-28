@@ -675,7 +675,7 @@ var commands = exports.commands = {
 	},
 	mono: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<center>Trainer: <font color="#72132F"><b>Pupitar21</b></font><br />' +
+		this.sendReplyBox('<center>Trainer: <font color="#2D940A"><b>Monophy</b></font><br />' +
 				  '<center>Types: Fairy(OU)<br />' +
 				  '<center>Signature Pokemon: <font color="#C11FA9"><b>Sylveon</b></font><br />' +
 				  '<center>Catchphrase: Weaklies are stronger than Strongies obv<br />' +
