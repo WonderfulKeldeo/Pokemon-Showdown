@@ -757,18 +757,12 @@ var commands = exports.commands = {
 	Hope: 'Vanitas',
 		Vanitas: function(target, room, user) {
 			if(!this.canBroadcast()) return;
-			this.sendReplyBox('<div class="notice">' 
-						'<div class="infobox" target="_blank">' 
-						'<center target="_blank">' 
-						'<img src="http://i.imgur.com/J6AZqhx.png" width="96" height="96" target="_blank">' +
+			this.sendReplyBox('<img src=http://i.imgur.com/J6AZqhx.png" width="96" height="96" target="_blank">' +
 						'<img src="http://i.imgur.com/5ZT56ml.png" width="315" height="70" target="_blank">' +
-						'<img src="http://i.imgur.com/mIolDwv.jpg" width="96" height="96" target="_blank">' +
+						'<center><img src="http://i.imgur.com/mIolDwv.jpg" width="96" height="96" target="_blank">' +
 						'<br target="_blank">' +
-						'<font color="lightblue" target="_blank"> Ace: Talonflame </font>' +
-						'<br target="_blank"> Show me anger'
-						'</center>'
-						'</div>'
-						'</div>');
+						'<center><font color="lightblue" target="_blank"> Ace: Talonflame </font>' +
+						'<center><br target="_blank"> Show me anger');
 	},
 
 	turtlelord: 'tl',
