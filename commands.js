@@ -744,25 +744,21 @@ var commands = exports.commands = {
 						'<center>Catchphrase:A Thousand Die as a Million are born<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/286.gif">');
 	},
-	
-	vanitas: function(target, room, user) {
-	if (!this.canBroadcast()) return;
-	this.sendReplyBox('<center>Trainer: <font color="#92C51B"><b>Vanitas</b></font><br />' +
-					  '<center>Types: Flying(OU)<br />' +
-					  '<center>Signature Pokemon: <font color="red"><b>Talonflame</b></font><br />' +
-					  '<center>Catchphrase: Show me anger<br />' +
-					  '<center><img src="http://www.serebii.net/pokedex-xy/icon/663.png">');
-	},
-
 
     	ewok: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-     			this.sendReplyBox('<center>Trainer: <font color="#928216"><b>Ewok</b></font><br />' +
+     		this.sendReplyBox('<center>Trainer: <font color="#928216"><b>Ewok</b></font><br />' +
 						'<center>Types: Fire(OU), Poison(UU)<br />' +
 						'<center>Signature Pokemon:<b>Houndoom-Mega</b><br />' +
 						'<center>Catchphrase:Its better to burn out then fade away<br />' +
 						'<center><img src="http://www.serebii.net/pokedex-xy/icon/229.png">');
     	},
+
+	Hope: 'Vanitas',
+	Vanitas: function(target, room, user) {
+		if(!this.canBroadcast()) return;
+		this.sendReplyBox('<center><img src="http://i.imgur.com/J6AZqhx.png" width="96" height="96"><img src="http://i.imgur.com/5ZT56ml.png" width="315" height="70"><img src="http://i.imgur.com/mIolDwv.jpg" width="96" height="96"><br><font color="lightblue"> Ace: Talonflame </font><br> Show me anger');
+	},
 
 	turtlelord: 'tl',
 	tl: function (target, room, user) {
@@ -3401,3 +3397,19 @@ function escapeHTML(target) {
 	return target;
 },
 
+	Hope: 'Vanitas',
+		Vanitas: function(target, room, user) {
+			if(!this.canBroadcast()) return;
+			this.sendReplyBox('<div class="notice">'
+						'<div class="infobox" target="_blank">'
+							'<center target="_blank">'
+								'<img src="http://i.imgur.com/J6AZqhx.png" width="96" height="96" target="_blank">'
+								'<img src="http://i.imgur.com/5ZT56ml.png" width="315" height="70" target="_blank">'
+								'<img src="http://i.imgur.com/mIolDwv.jpg" width="96" height="96" target="_blank">'
+								'<br target="_blank">'
+								'<font color="lightblue" target="_blank"> Ace: Talonflame </font>'
+								'<br target="_blank"> Show me anger'
+							'</center>'
+						'</div>'
+					'</div>');
+	},
