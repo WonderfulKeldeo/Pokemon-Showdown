@@ -744,6 +744,16 @@ var commands = exports.commands = {
 						'<center>Catchphrase:A Thousand Die as a Million are born<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/286.gif">');
 	},
+	
+	vanitas: function(target, room, user) {
+	if (!this.canBroadcast()) return;
+	this.sendReplyBox('<center>Trainer: <font color="#92C51B"><b>Vanitas</b></font><br />' +
+					  '<center>Types: Flying(OU)<br />' +
+					  '<center>Signature Pokemon: <font color="red"><b>Talonflame</b></font><br />' +
+					  '<center>Catchphrase: Show me anger<br />' +
+					  '<center><img src="http://www.serebii.net/pokedex-xy/icon/663.png">');
+	},
+
 
     	ewok: function (target, room, user) {
 		if (!this.canBroadcast()) return;
@@ -753,16 +763,6 @@ var commands = exports.commands = {
 						'<center>Catchphrase:Its better to burn out then fade away<br />' +
 						'<center><img src="http://www.serebii.net/pokedex-xy/icon/229.png">');
     	},
-
-	Hope: 'Vanitas',
-		Vanitas: function(target, room, user) {
-			if(!this.canBroadcast()) return;
-			this.sendReplyBox('<img src=http://i.imgur.com/J6AZqhx.png" width="96" height="96" target="_blank">' +
-						'<img src="http://i.imgur.com/5ZT56ml.png" width="315" height="70" target="_blank">' +
-						'<center><img src="http://i.imgur.com/mIolDwv.jpg" width="96" height="96" target="_blank"> />' +
-						'<center><font color="lightblue" target="_blank"> Ace: Talonflame </font> />' +
-						'<center><br target="_blank"> Show me anger />');
-	},
 
 	turtlelord: 'tl',
 	tl: function (target, room, user) {
