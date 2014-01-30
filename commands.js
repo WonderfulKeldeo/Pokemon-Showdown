@@ -765,15 +765,11 @@ var commands = exports.commands = {
 						'<center><a href="https://www.youtube.com/watch?v=bojx9BDpJks"><img src="http://www.smogon.com/download/sprites/bwmini/389.gif"></a>');
 	},
 	
-	vanitas: 'hope',
-	hope: function(target, room, user) {
-	if (!this.canBroadcast()) return;
-	this.sendReplyBox('<center>Trainer: <font color="#92C51B"><b>Vanitas</b></font><br />' +
-					  '<center>Types: Flying(OU)<br />' +
-					  '<center>Signature Pokemon: <font color="red"><b>Talonflame</b></font><br />' +
-					  '<center>Catchphrase: Show me anger<br />' +
-					  '<center><img src="http://www.serebii.net/pokedex-xy/icon/663.png">');
-	},
+	hope: 'vanitas',
+	vanitas: function(target, room, user) {
+                        if(!this.canBroadcast()) return;
+                        this.sendReplyBox('<center><img src="http://i.imgur.com/EYkBb4N.jpg" width="96" height="96"><img src="http://i.imgur.com/5ZT56ml.png" width="315" height="70"><img src="http://i.imgur.com/mIolDwv.jpg" width="96" height="96"><br><font color="lightblue"> Ace: Talonflame </font><br> Show me anger');
+   	},
 
 	clam: 'hc',
 	bugmaster: 'hc',
