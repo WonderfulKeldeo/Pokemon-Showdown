@@ -768,7 +768,7 @@ var commands = exports.commands = {
 	hope: 'vanitas',
 	vanitas: function(target, room, user) {
                         if(!this.canBroadcast()) return;
-                        this.sendReplyBox('<center><img src="http://i.imgur.com/EYkBb4N.jpg" width="96" height="96"><img src="http://i.imgur.com/5ZT56ml.png" width="315" height="70"><img src="http://i.imgur.com/mIolDwv.jpg" width="96" height="96"><br><font color="lightblue"> Ace: Talonflame </font><br> Show me anger');
+                        this.sendReplyBox('<center><img src="http://i.imgur.com/EYkBb4N.jpg" width="96" height="96"><img src="http://i.imgur.com/5ZT56ml.png" width="315" height="70"><img src="http://i.imgur.com/mIolDwv.jpg" width="96" height="96"><br><font color=#00BFFF> Ace: Talonflame </font><br> Show me anger');
    	},
 
 	clam: 'hc',
