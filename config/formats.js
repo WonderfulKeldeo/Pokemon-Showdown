@@ -1,5 +1,5 @@
 // Note: This is the list of formats
-// The rules that formats use are stored in data/formats.js
+// The rules that formats use are stored in data/rulesets.js
 
 exports.Formats = [
 
@@ -111,6 +111,13 @@ exports.Formats = [
 		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite']
 	},
 	{
+		name: "OU (suspect test)",
+		section: "XY Singles",
+
+		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
+		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite', 'Lucarionite', 'Genesect', 'Deoxys-Speed']
+	},
+	{
 		name: "Ubers",
 		section: "XY Singles",
 
@@ -122,7 +129,7 @@ exports.Formats = [
 		section: "XY Singles",
 
 		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
-		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite', 'OU', 'BL', 'Drizzle']
+		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite', 'Heracronite', 'OU', 'BL', 'Drizzle', 'Drought']
 	},
 	{
 		name: "LC",
@@ -429,6 +436,22 @@ exports.Formats = [
 		banlist: ['Soul Dew', 'Thick Club', 'Deepseatooth', 'Deepseascale', 'Light Ball', 'Mawilite', 'Medichamite', 'Eviolite', 'Shedinja', 'Smeargle', 'Huge Power', 'Pure Power']
 	},
 	{
+		name: "Middle Cup",
+		section: "OM of the Month",
+		
+		searchShow: false,
+		ruleset: ['Pokemon', 'Team Preview', 'Standard'],
+		banlist: ['Illegal', 'Eviolite'],
+		maxLevel: 50,
+		defaultLevel: 50,
+		validateSet: function(set) {
+			var template = this.getTemplate(set.species || set.name);
+			if (!template.evos || template.evos.length === 0 || !template.prevo) {
+				return [set.species + " is not the middle Pokémon in an evolution chain."];
+			}
+		}
+	},
+	{
 		name: "CAP",
 		section: "Other Metagames",
 
@@ -460,14 +483,14 @@ exports.Formats = [
 		name: "Balanced Hackmons",
 		section: "Other Metagames",
 
-		ruleset: ['Pokemon', 'OHKO Clause'],
+		ruleset: ['Pokemon', 'OHKO Clause', 'HP Percentage Mod'],
 		banlist: ['Wonder Guard', 'Shadow Tag', 'Arena Trap', 'Pure Power', 'Huge Power', 'Parental Bond']
 	},
 	{
 		name: "Hackmons",
 		section: "Other Metagames",
 
-		ruleset: ['Pokemon'],
+		ruleset: ['Pokemon', 'HP Percentage Mod'],
 		banlist: []
 	},
 	{

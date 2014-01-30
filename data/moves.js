@@ -5716,8 +5716,9 @@ exports.BattleMovedex = {
 		pp: 10,
 		priority: 0,
 		isBounceable: true,
-		onHit: function(pokemon) {
-			this.heal(Math.ceil(pokemon.maxhp * 0.5));
+		onHit: function(target, source) {
+			if (source.ability === 'megalauncher') this.heal(this.modify(target.maxhp, 0.75));
+			else this.heal(Math.ceil(target.maxhp * 0.5));
 		},
 		secondary: false,
 		target: "normal",
@@ -10015,7 +10016,7 @@ exports.BattleMovedex = {
 			onTryHit: function(target, source, effect) {
 				// Quick Guard blocks moves with positive priority, even those given increased priority by Prankster or Gale Wings.
 				// (e.g. it blocks 0 priority moves boosted by Prankster or Gale Wings)
-				if (effect && (effect.id === 'feint' || effect.priority <= 0)) {
+				if (effect && (effect.id === 'feint' || effect.priority <= 0 || effect.target === 'self')) {
 					return;
 				}
 				this.add('-activate', target, 'Quick Guard');
@@ -12182,7 +12183,7 @@ exports.BattleMovedex = {
 		effect: {
 			duration: 1,
 			onStart: function(target) {
-				this.add('-singleturn', target, 'Spiky Shield');
+				this.add('-singleturn', target, 'move: Protect');
 			},
 			onTryHitPriority: 3,
 			onTryHit: function(target, source, move) {
@@ -12191,7 +12192,7 @@ exports.BattleMovedex = {
 					return;
 				}
 				if (move && move.target === 'self') return;
-				this.add('-activate', target, 'Spiky Shield');
+				this.add('-activate', target, 'move: Protect');
 				if (move.isContact) {
 					this.damage(source.maxhp/8, source, target);
 				}
