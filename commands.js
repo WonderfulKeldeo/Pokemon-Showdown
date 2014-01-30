@@ -673,9 +673,9 @@ var commands = exports.commands = {
 						'<center>PM me server/command ideas. I am a coder for Amethyst. <br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/647.gif">');
 	},
-	mono: function(target, room, user) {
+	kuno: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<center>Trainer: <font color="#2D940A"><b>Monophy</b></font><br />' +
+		this.sendReplyBox('<center>Trainer: <font color="#666C19"><b>Kunoichi</b></font><br />' +
 				  '<center>Types: Fairy(OU)<br />' +
 				  '<center>Signature Pokemon: <font color="#C11FA9"><b>Sylveon</b></font><br />' +
 				  '<center>Catchphrase: Weaklies are stronger than Strongies obv<br />' +
