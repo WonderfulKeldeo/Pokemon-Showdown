@@ -205,7 +205,7 @@ var commands = exports.commands = {
 	},
 	
 	gumiho: function(target, room, user) {
-		if (!this.canBroadcast() return;
+		if (!this.canBroadcast()) return;
 		if (room.id != 'garlikksfineestablishment') {
 			return this.sendReply("Nope.");
 		}
