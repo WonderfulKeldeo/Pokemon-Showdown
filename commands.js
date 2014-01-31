@@ -203,6 +203,14 @@ var commands = exports.commands = {
 		var customavatars = fs.readFileSync('config/avatars.txt','utf8');
 		user.send('|popup|'+customavatars);
 	},
+	
+	gumiho: function(target, room, user) {
+		if (!this.canBroadcast() return;
+		if (room.id != 'garlikksfineestablishment') {
+			return this.sendReply("Nope.");
+		}
+		this.sendReplyBox('<center><img src="http://i460.photobucket.com/albums/qq329/cgpb21/gif/tumblr_ll643iyJFH1qhw7pyo1_400.gif">');
+	},
 
 	reminders: 'reminder',
 	reminder: function(target, room, user) {
