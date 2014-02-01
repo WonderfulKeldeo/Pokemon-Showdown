@@ -728,7 +728,7 @@ var commands = exports.commands = {
 
 	smelly: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox ('<center>Trainer: mrSmellyfeet100<br />' +
+		this.sendReplyBox ('<center>Trainer:<b><font color=#2f651a> mrSmellyfeet100</font></b><br />' +
 						'<center>Signature Pokemon: <font color="grey"><b>Aggron-Mega</b></font><br />' +
 						'<center>Catchphrase: smell ya later!<br />' +
 						'<center><img src="http://www.serebii.net/pokedex-xy/icon/306.png">');
