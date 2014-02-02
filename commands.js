@@ -1126,7 +1126,7 @@ var commands = exports.commands = {
 
 
 	afk: function(target, room, user) {
-		if (!this.can('warn') && user.userid != 'blizzardq') return false;
+		if (!this.can('warn')) return false;
 		if (user.afk === true) {
 			return this.sendReply("You are already Away.");
 		}
@@ -1142,7 +1142,7 @@ var commands = exports.commands = {
 	},
 
 	unafk: function(target, room, user) {
-		if (!this.can('warn') && user.userid != 'blizzardqaway') return false;
+		if (!this.can('warn')) return false;
 		if (user.afk != true) {
 			return this.sendReply("You need to be Away first.");
 		}
