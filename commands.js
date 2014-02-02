@@ -106,7 +106,8 @@ var commands = exports.commands = {
 		return this.sendReply('Your team of '+pokemonNames.join(', ')+' has been submitted successfully. You may now challenge Gym Leaders.');
 	},
 
-	registerleagueuu: function(target, room, user) {
+	registerleagueuu: 'rluu',
+	rluu: function(target, room, user) {
 		var leaguesuu = fs.readFileSync('config/uuleague.txt','utf8');
 		if (leaguesuu.indexOf(user.name) > -1) {
 			return this.sendReply("You are already registered for the Amethyst UU League.");
@@ -686,9 +687,9 @@ var commands = exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer:<font color="#064579"><b>Kenchi</b></font><br />' +
 				  	'<center>Types: Electric(UU)<br />' +
-				  	'<center>Signature Pokemon: <font color="blue"><b>Thundurus-Therian</b></font><br />' +
+				  	'<center>Signature Pokemon: <font color="green"><b>Breloom</b></font><br />' +
 					'<center>Catchphrase: kek<br />' +
-					'<center><img src="http://www.smogon.com/download/sprites/bwmini/642-t.gif">');
+					'<center><img src="http://www.smogon.com/download/sprites/bwmini/286.gif">');
 	},
 
 	kuno: function(target, room, user) {
@@ -812,7 +813,7 @@ var commands = exports.commands = {
 	bay: 'badsteel',
 	badsteel: function (target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('<center>Trainer: <font color="#1823A5"><b>Bay</font>(<font color="#621F75">BadSteel</b></font>)<br />' +
+		this.sendReplyBox('<center>Trainer: <font color="#1823A5"><b>Bay</b></font>(<font color="#621F75"><b>BadSteel</b></font>)<br />' +
 						'<center>Types: Steel(OU), Ice(UU), Flying(RU)<br />' +
 						'<center>Signature Pokemon: <font color="brown"><b>Shuckle</b></font><br />' +
 						'<center>Catchphrase:Everyday I\'m Shuckling.<br />' +
