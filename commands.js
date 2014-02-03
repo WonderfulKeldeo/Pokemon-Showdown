@@ -577,9 +577,9 @@ var commands = exports.commands = {
  		 if (!this.canBroadcast()) return;
  		 this.sendReplyBox('<center>Trainer: <font color="#986C1B"><b>saira</b></font><br />' +
                            '<center>Types: Psychic(OU)<br />' +
-                           '<center>Catchphrase:bloom to blossom, bloom to perish<br />' +
-                           '<center>Signature Pokemon: <font color="brown"><b>Alakazam</b></font><br />' +
-                           '<center><img src="http://www.smogon.com/download/sprites/bwmini/65.gif"><br />');
+                           '<center>Catchphrase:I\'m Miss sugar pink liquor liquor lips, hit me with your sweet love, steal me with a kiss <br />' +
+                           '<center>Signature Pokemon: <font color="#FA92B2"><b>Mew/b></font><br />' +
+                           '<center><img src="http://www.smogon.com/download/sprites/bwmini/151.gif"><br />');
 	},
 
 	ross: 'zuku',
