@@ -816,7 +816,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer: <font color="#1823A5"><b>Bay</b></font>(<font color="#621F75"><b>BadSteel</b></font>)<br />' +
 						'<center>Types: Steel(OU), Ice(UU), Flying(RU)<br />' +
 						'<center>Signature Pokemon: <font color="brown"><b>Shuckle</b></font><br />' +
-						'<center>Catchphrase:Everyday I\'m Shuckling.<br />' +
+						'<center>Catchphrase:Never gonna give you up.<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/213.gif">');
 	},
 
