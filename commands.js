@@ -636,15 +636,15 @@ var commands = exports.commands = {
  		 this.sendReplyBox('<center>Trainer: <font color="#986C1B"><b>saira</b></font><br />' +
                            '<center>Types: Psychic(OU)<br />' +
                            '<center>Catchphrase:I\'m Miss sugar pink liquor liquor lips, hit me with your sweet love, steal me with a kiss <br />' +
-                           '<center>Signature Pokemon: <font color="#FA92B2"><b>Mew</b></font><br />' +
-                           '<center><img src="http://www.smogon.com/download/sprites/bwmini/151.gif"><br />');
+                           '<center>Signature Pokemon: <font color="#C11FA9"><b>Mew</b></font><br />' +
+                           '<center><img src="http://www.smogon.com/download/sprites/bwmini/151.gif">');
 	},
 
 	ross: 'zuku',
 	zuku: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox ('<center>Trainer:<font color="#9A9C26"><b>Zukushiku</b></font><br />' +
-                   '<center>Types: Fairy(OU E4), Dark(UU E4), Rock(RU E4), Grass(NU)<br />' +
+                   //'<center>Types: Fairy(OU E4), Dark(UU E4), Rock(RU E4), Grass(NU)<br />' +
                    '<center>Signature Pokemon: <font color="red"><b>Victini</b></font><br />' +
                    '<center>Catchphrase: I\'ll swallow swords spit up my pride, I follow through again this time. I\'ll be just fine...<br />' +
                    '<center><img src="http://www.smogon.com/download/sprites/bwmini/494.gif">');
@@ -934,7 +934,7 @@ var commands = exports.commands = {
 	zac: function(target, room, user) {
 		if(!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer: <font color="#2723A4"><b>ZacT94</b></font><br />' +
-						'<center>Types: Ghost(UU), Normal(RU)<br />' +
+						'<center>Types: Normal(RU)<br />' +
 						'<center>Signature Pokemon: <font color="#D9D50D"><b>Cofagrigus</b></font><br />' +
 						'<center>Catchphrase:Damn it my cat won\'t stop walking on my keyboard!<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/563.gif">');
@@ -1184,7 +1184,7 @@ var commands = exports.commands = {
 
 
 	afk: function(target, room, user) {
-		if (!this.can('warn')) return false;
+		if (!this.can('warn') && user.userid != 'blizzardq') return false;
 		if (user.afk === true) {
 			return this.sendReply("You are already Away.");
 		}
@@ -1200,7 +1200,7 @@ var commands = exports.commands = {
 	},
 
 	unafk: function(target, room, user) {
-		if (!this.can('warn')) return false;
+		if (!this.can('warn') && user.userid != 'blizzardq-away') return false;
 		if (user.afk != true) {
 			return this.sendReply("You need to be Away first.");
 		}
