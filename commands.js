@@ -532,6 +532,64 @@ var commands = exports.commands = {
 		}
 	},
 
+	customavatar: 'giveavatar',
+	giveavatar: function(target, room, user, connection) {
+		if (!this.can('giveavatar') && user.userid != 'jd') return this.sendReply('/giveavatar - Access denied.');
+		try { 
+			request = require('request');
+		} catch (e) {
+			return this.sendReply('/giveavatar requires the request module. Please run "npm install request" before using this command.');
+		}
+		if (!target) return this.sendReply('Usage: /giveavatar [username], [image] - Gives [username] the image specified as their avatar. Images are required to be .PNG or .GIF. Requires: & ~');
+		parts = target.split(',');
+		targetUser = Users.get(parts[0].trim());
+		if (!targetUser) return this.sendReply('User '+target+' not found.');
+		filename = parts[1].trim();
+		uri = filename;
+		filename = targetUser.userid + filename.slice(filename.toLowerCase().length - 4,filename.length);
+		filetype = filename.slice(filename.toLowerCase().length - 4,filename.length);
+		if (filetype != '.png' && filetype != '.gif') {
+			return this.sendReply('/giveavatar - Invalid image format. Images are required to be in either PNG or GIF format.');
+		}
+		if (!targetUser) return this.sendReply('User '+target+' not found.');
+		self = this;
+		var download = function(uri, filename, callback) {
+			request.head(uri, function(err, res, body) {
+    			var r = request(uri).pipe(fs.createWriteStream('config/avatars/'+filename));
+    			r.on('close', callback);
+  			});
+		};
+		download(uri, filename, function(){
+			fs.readFile('config/avatars.csv','utf8',function(err, data) {
+				if (err) data = '';
+				match = false;
+				var row = (''+data).split("\n");
+				var line = '';
+				for (var i = row.length; i > -1; i--) {
+					if (!row[i]) continue;
+					var parts = row[i].split(",");
+					if (targetUser.userid == parts[0]) {
+						match = true;
+						line = line + row[i];
+						break;
+					}
+				}
+				if (match === true) {
+					var re = new RegExp(line,"g");
+					var result = data.replace(re, targetUser.userid+','+filename);
+					fs.writeFile('config/avatars.csv', result, 'utf8', function (err) {
+						if (err) return console.log(err);
+					});
+				} else {
+					fs.appendFile('config/avatars.csv','\n'+targetUser.userid+','+filename);
+				}
+    			self.sendReply(targetUser.name+' has received a custom avatar.');
+    			targetUser.avatar = filename;
+				targetUser.sendTo(room, 'You have received a custom avatar from ' + user.name + '.');
+			});
+  		});
+	},
+
 	/*********************************************************
 	 * Other assorted Amethyst commands
 	 *********************************************************/
