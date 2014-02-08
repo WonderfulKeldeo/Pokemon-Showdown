@@ -14,7 +14,7 @@ exports.Formats = [
 	},
 	{
 		name: "Sketchmons",
-		section: "Amethyst Meta",
+		section: "Amethyst Metas",
 
 		mod: 'sketchmons',
 		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
