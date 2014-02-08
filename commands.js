@@ -688,7 +688,7 @@ var commands = exports.commands = {
 	boss: function(target, room, user) {
 		if(!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer: <font color="#62DD03"><b>Boss</b></font><br />' +
-						'<center>Types: Champion(OU), Water(OU E4), Dark(UU)<br />' +
+						'<center>Types: Water(OU E4), Dark(UU)<br />' +
 						'<center>Signature Pokemon: <font color="blue"><b>Kingdra</b></font><br />' +
 						'<center>Catchphrase: The one who is prepared is the one who wins.<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/230.gif">');
@@ -739,6 +739,15 @@ var commands = exports.commands = {
 						'<center>Catchphrase: こんにちは.<br />' +
 						'<center>PM me server/command ideas. I am a coder for Amethyst.<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/647.gif">');
+	},
+	
+	nob: function(target, room, user) {
+		if (!this.canBroadcast()) return;
+		this.sendReplyBox('<center>Trainer:<font color="#C11FA9"><b>miloticnob</b></font><br />' +
+						'<center>Types: Normal(OU)<br />' +
+						'<center>Signature Pokemon:<b>Chatot</b><br />' +
+						'<center>Catchphrase: aosmexy4lyf<br />' +
+						'<center><img src="http://www.smogon.com/download/sprites/bwmini/441.gif">');
 	},
 
 	kenchi: function(target, room, user) {
@@ -845,7 +854,7 @@ var commands = exports.commands = {
 	tl: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer: <font color="#776C08"><b>The TurtleLord</b></font><br />' +
-						'<center>Types: Ground(OU), Water(UU), Poison(RU E4)<br />' +
+						'<center>Types: Champion(OU), Ground(OU), Water(UU), Poison(RU E4)<br />' +
 						'<center>Signature Pokemon: <font color="green"><b>Torterra</b></font><br />' +
 						'<center>Catchphrase:my turtles will smash yo\' ass<br />' +
 						'<center><a href="https://www.youtube.com/watch?v=bojx9BDpJks"><img src="http://www.smogon.com/download/sprites/bwmini/389.gif"></a>');
@@ -1200,7 +1209,7 @@ var commands = exports.commands = {
 	},
 
 	unafk: function(target, room, user) {
-		if (!this.can('warn') && user.userid != 'blizzardq-away') return false;
+		if (!this.can('warn') && user.userid != 'blizzardqaway') return false;
 		if (user.afk != true) {
 			return this.sendReply("You need to be Away first.");
 		}
