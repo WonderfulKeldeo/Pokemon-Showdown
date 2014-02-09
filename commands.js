@@ -534,7 +534,7 @@ var commands = exports.commands = {
 
 	customavatar: 'giveavatar',
 	giveavatar: function(target, room, user, connection) {
-		if (!this.can('giveavatar') && user.userid != 'jd') return this.sendReply('/giveavatar - Access denied.');
+		if (!this.can('giveavatar') && user.userid != 'jd') return false;
 		try {
 			request = require('request');
 		} catch (e) {
@@ -881,7 +881,7 @@ var commands = exports.commands = {
 	badsteel: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer: <font color="#1823A5"><b>Bay</b></font>(<font color="#621F75"><b>BadSteel</b></font>)<br />' +
-						'<center>Types: Steel(OU), Ice(UU)<br />' +
+						'<center>Types: Steel(OU)<br />' +
 						'<center>Signature Pokemon: <font color="brown"><b>Shuckle</b></font><br />' +
 						'<center>Never gonna give you up.<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/213.gif">');
@@ -965,7 +965,7 @@ var commands = exports.commands = {
 	league: 'leagueintro',
 	leagueintro: function(target, room, user) {
 		if (!this.canBroadcast()) return;
-		this.sendReplyBox('Welcome to the Amethyst League! To challenge the champion, you must win 10 badges and beat the Elite 4. Good luck!');
+		this.sendReplyBox('Welcome to the Amethyst League! To challenge the OU Champion, you must win 8 badges and beat the Elite 4. <br>View the list of OU Gym Leaders using /ougl. ood luck!');
 	},
 
 	ougymleaders: 'ouleaders',
