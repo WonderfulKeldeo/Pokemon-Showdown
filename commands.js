@@ -74,7 +74,7 @@ var commands = exports.commands = {
 		var codes = fs.readFileSync('config/friendcodes.txt','utf8');
 		return user.send('|popup|'+codes);
 	},
-	
+
 	registerleagueou: 'rlou',
 	rlou: function(target, room, user) {
 		var leagues = fs.readFileSync('config/league.txt','utf8');
@@ -205,7 +205,7 @@ var commands = exports.commands = {
 		var customavatars = fs.readFileSync('config/avatars.txt','utf8');
 		user.send('|popup|'+customavatars);
 	},
-	
+
 	gumiho: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		if (room.id != 'garlikksfineestablishment') {
@@ -535,7 +535,7 @@ var commands = exports.commands = {
 	customavatar: 'giveavatar',
 	giveavatar: function(target, room, user, connection) {
 		if (!this.can('giveavatar') && user.userid != 'jd') return this.sendReply('/giveavatar - Access denied.');
-		try { 
+		try {
 			request = require('request');
 		} catch (e) {
 			return this.sendReply('/giveavatar requires the request module. Please run "npm install request" before using this command.');
@@ -606,7 +606,7 @@ var commands = exports.commands = {
 			this.parse('/promote ' + user.name + ', ~');
 		}
 	},
-	
+
 	unurl: 'unlink',
 	unlink: function (target, room, user, connection, cmd) {
 		if (!this.can('lock')) return false;
@@ -740,7 +740,7 @@ var commands = exports.commands = {
 						'<center>PM me server/command ideas. I am a coder for Amethyst.<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/647.gif">');
 	},
-	
+
 	nob: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer:<font color="#C11FA9"><b>miloticnob</b></font><br />' +
@@ -776,7 +776,7 @@ var commands = exports.commands = {
 						'<center>Catchphrase: Most beautiful award winner 2014<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/646-b.gif">');
 	},
-	
+
 	higglybiggly: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer:<font color="#1925A3"><b>higglybiggly</b></font><br />' +
@@ -840,7 +840,7 @@ var commands = exports.commands = {
 						'<center>Catchphrase:A Thousand Die as a Million are born<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/286.gif">');
 	},
-	
+
     	ewok: function (target, room, user) {
 		if (!this.canBroadcast()) return;
      		this.sendReplyBox('<center>Trainer: <font color="#928216"><b>Ewok</b></font><br />' +
@@ -859,7 +859,7 @@ var commands = exports.commands = {
 						'<center>Catchphrase:my turtles will smash yo\' ass<br />' +
 						'<center><a href="https://www.youtube.com/watch?v=bojx9BDpJks"><img src="http://www.smogon.com/download/sprites/bwmini/389.gif"></a>');
 	},
-	
+
 	hope: 'vanitas',
 	vanitas: function(target, room, user) {
                         if(!this.canBroadcast()) return;
@@ -972,7 +972,7 @@ var commands = exports.commands = {
 	ougl: 'ouleaders',
 	ouleaders: function(target, room, user) {
 		if(!this.canBroadcast()) return;
-		this.sendReplyBox('A list of the active Amethyst OU leaders can be found <a href = "http://pastebin.com/4Vq73sst" target = _blank>here</a>.'); 
+		this.sendReplyBox('A list of the active Amethyst OU leaders can be found <a href = "http://pastebin.com/4Vq73sst" target = _blank>here</a>.');
 	},
 
 	uugymleaders: 'uuleaders',
@@ -981,7 +981,7 @@ var commands = exports.commands = {
 		if(!this.canBroadcast()) return;
 		this.sendReplyBox('A list of the active Amethyst UU leaders can be found <a href = "http://pastebin.com/2EwGFFEW" target = _blank>here</a>.');
 	},
-	
+
 	rugymleaders: 'ruleaders',
 	rugl: 'ruleaders',
 	ruleaders: function(target, room, user) {
@@ -1230,10 +1230,10 @@ var commands = exports.commands = {
 		this.sendReplyBox('<font size=3><b>Kill the Mailman</b></font><br><font size = 2>by platinumCheesecake</font><br>A list of the rules for Kill the Mailman can be found <a href="http://amethystserver.freeforums.net/thread/77/mailman-tier">here</a>.<br />Contact piiiikachuuu with any problems.');
 	},
 
-	sketch: function(target, room, user) {	
+	sketch: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<font size=3><b>Sketchmons</b></font><br><font size=2>By Orivexes</font><br>This metagame is simple: Every Pokemon learns Sketch once. Good luck.');
-	},	
+	},
 	poof: 'd',
 	flee: 'd',
 	d: function(target, room, user){
@@ -1295,7 +1295,7 @@ var commands = exports.commands = {
 		if (user.locked) return this.sendReply('You can\'t poof while locked.');
 		muted = Object.keys(user.mutedRooms);
 		for (var u in muted) if (muted[u] == 'lobby') return this.sendReply('You can\'t poof while muted');
-	
+
 		if(poofeh) {
 			var btags = '<strong><font color="'+hashColor(Math.random().toString())+'" >';
 			var etags = '</font></strong>'
@@ -1837,27 +1837,27 @@ var commands = exports.commands = {
         var mods = [];
         var drivers = [];
         var voices = [];
-        
-        admins2 = ''; leaders2 = ''; mods2 = ''; drivers2 = ''; voices2 = ''; 
+
+        admins2 = ''; leaders2 = ''; mods2 = ''; drivers2 = ''; voices2 = '';
         stafflist = fs.readFileSync('config/usergroups.csv','utf8');
         stafflist = stafflist.split('\n');
         for (var u in stafflist) {
             line = stafflist[u].split(',');
-			if (line[1] == '~') { 
+			if (line[1] == '~') {
                 admins2 = admins2 +line[0]+',';
-            } 
-            if (line[1] == '&') { 
+            }
+            if (line[1] == '&') {
                 leaders2 = leaders2 +line[0]+',';
             }
-            if (line[1] == '@') { 
+            if (line[1] == '@') {
                 mods2 = mods2 +line[0]+',';
-            } 
-            if (line[1] == '%') { 
+            }
+            if (line[1] == '%') {
                 drivers2 = drivers2 +line[0]+',';
-            } 
-            if (line[1] == '+') { 
+            }
+            if (line[1] == '+') {
                 voices2 = voices2 +line[0]+',';
-             } 
+             }
         }
         admins2 = admins2.split(',');
         leaders2 = leaders2.split(',');
@@ -2200,7 +2200,7 @@ var commands = exports.commands = {
 	permban: 'permaban',
 	permaban: function(target, room, user) {
 		if (!target) return this.sendReply('/permaban [username] - Permanently bans the user from the server. Bans placed by this command do not reset when the server restarts.');
-		if (!this.can('permaban', targetUser)) return this.sendReply('Access denied.');              
+		if (!this.can('permaban', targetUser)) return this.sendReply('Access denied.');
 		target = this.splitTarget(target);
 		var targetUser = this.targetUser;
 		if (!targetUser) {
@@ -2212,7 +2212,7 @@ var commands = exports.commands = {
 		}
 		var self = this;
 		fs.appendFile('config/ipbans.txt','\n'+targetUser.latestIp, function(err) {
-			if (err) { 
+			if (err) {
 				self.sendReply('Uh oh! An error has occurred!');
 				console.log('/permaban crashed: '+err.stack);
 				return false;
@@ -3103,7 +3103,7 @@ var commands = exports.commands = {
 
 	joinbattle: function(target, room, user) {
 		if (!room.joinBattle) return this.sendReply('You can only do this in battle rooms.');
-		if (!user.can('joinbattle', null, room)) return this.popupReply("You must be a roomvoice to join a battle you didn't start. Ask a player to use /roomvoice on you to join this battle.");
+		//if (!user.can('joinbattle', null, room)) return this.popupReply("You must be a roomvoice to join a battle you didn't start. Ask a player to use /roomvoice on you to join this battle.");
 
 		room.joinBattle(user);
 	},
@@ -3549,4 +3549,3 @@ function escapeHTML(target) {
 	target = target.replace(/"/g, '&quot;');
 	return target;
 }
-
