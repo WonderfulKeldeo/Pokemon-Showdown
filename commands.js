@@ -177,7 +177,7 @@ var commands = exports.commands = {
 			return this.sendReplyBox('<b>'+a+'</b> to the power of <b>'+b+'</b> is <b>'+square+'</b>');
 		} else if (operator === 'sr' || operator === 'squareroot') {
 			var sqrt = Math.sqrt(a);
-			return this.sendReplyBox("The square root of <b>"+a+"</b> is <b>"+sqrt+"</b>");
+			return this.sendReplyBox('The square root of <b>'+a+'</b> is <b>'+sqrt+'</b>');
 		}
 	},
 
@@ -627,7 +627,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer: <font color="#09B38E"><b>Kozman</b></font><br />' +
                   	'<center>Types: Fighting(OU E4)<br />' +
                   	'<center>Signature Pokemon: <font color="purple"><b>Mienshao</b></font><br />' +
-                  	'<center>Catchphrase: Everyone has an inner Amethyst... You just need to unlock it.<br />' +
+                  	'<center>Everyone has an inner Amethyst... You just need to unlock it.<br />' +
                   	'<center><img src="http://www.smogon.com/download/sprites/bwmini/620.gif">');
 	},
 
@@ -635,7 +635,7 @@ var commands = exports.commands = {
  		 if (!this.canBroadcast()) return;
  		 this.sendReplyBox('<center>Trainer: <font color="#986C1B"><b>saira</b></font><br />' +
                            '<center>Types: Psychic(OU)<br />' +
-                           '<center>Catchphrase:I\'m Miss sugar pink liquor liquor lips, hit me with your sweet love, steal me with a kiss <br />' +
+                           '<center>I\'m Miss sugar pink liquor liquor lips, hit me with your sweet love, steal me with a kiss <br />' +
                            '<center>Signature Pokemon: <font color="#C11FA9"><b>Mew</b></font><br />' +
                            '<center><img src="http://www.smogon.com/download/sprites/bwmini/151.gif">');
 	},
@@ -646,7 +646,7 @@ var commands = exports.commands = {
 		this.sendReplyBox ('<center>Trainer:<font color="#9A9C26"><b>Zukushiku</b></font><br />' +
                    //'<center>Types: Fairy(OU E4), Dark(UU E4), Rock(RU E4), Grass(NU)<br />' +
                    '<center>Signature Pokemon: <font color="red"><b>Victini</b></font><br />' +
-                   '<center>Catchphrase: I\'ll swallow swords spit up my pride, I follow through again this time. I\'ll be just fine...<br />' +
+                   '<center>I\'ll swallow swords spit up my pride, I follow through again this time. I\'ll be just fine...<br />' +
                    '<center><img src="http://www.smogon.com/download/sprites/bwmini/494.gif">');
 	},
 
@@ -655,7 +655,7 @@ var commands = exports.commands = {
 		this.sendReplyBox ('<center>Trainer: <font color="#1A5370"><b>Nord</b></font><br />' +
                    '<center>Types: Ice(Former OU E4)<br />' +
                    '<center>Signature Pokemon: <font color="#6E69D1"><b>Regice</b></font><br />' +
-                   '<center>Catchphrase: Fabuuuuuuuuuuuloussssssssssssssss<br />' +
+                   '<center>Fabuuuuuuuuuuuloussssssssssssssss<br />' +
                    '<center><img src="http://www.smogon.com/download/sprites/bwmini/378.gif">');
 	},
 
@@ -663,7 +663,7 @@ var commands = exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer: <font color="#C11FA9"><b>Mizu :D</b></font><br />' +
                   '<center>Signaute Pokemon: <font color="#C11FA9"><b>Togekiss</b></font><br />' +
-                  '<center>Catchphrase: /me glomps jd<br />' +
+                  '<center>/me glomps jd<br />' +
                   '<center><img src="http://www.smogon.com/download/sprites/bwmini/468.gif">');
 	},
 
@@ -672,7 +672,7 @@ var commands = exports.commands = {
 		this.sendReplyBox ('<center>Trainer:<font color="#750292"><b>Miner0</b></font><br />' +
                     '<center>Types: Fire(Former OU E4), Flying(Former UU E4),Bug (Former RU E4)<br />' +
                     '<center>Signature Pokemon: <font color="red"><b>Darmanitan</b></font><br />' +
-                    '<center>Catchphrase:  It doesn\'t matter on the types in the begining, only the outcome does.<br />' +
+                    '<center>It doesn\'t matter on the types in the begining, only the outcome does.<br />' +
                     '<center><img src="http://www.smogon.com/download/sprites/bwmini/555.gif">');
 	},
 
@@ -681,7 +681,7 @@ var commands = exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer: <font color="#C71A20"><b>Aikenkα</b></font><br />' +
 						'<center>Signature Pokemon: <font color="brown"><b>Damion the Dragonite</b></font><br />' +
-						'<center>Catchphrase: My mom is my inspiration<br />' +
+						'<center>My mom is my inspiration<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/149.gif">');
 	},
 
@@ -690,7 +690,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer: <font color="#62DD03"><b>Boss</b></font><br />' +
 						'<center>Types: Water(OU E4), Dark(UU)<br />' +
 						'<center>Signature Pokemon: <font color="blue"><b>Kingdra</b></font><br />' +
-						'<center>Catchphrase: The one who is prepared is the one who wins.<br />' +
+						'<center>The one who is prepared is the one who wins.<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/230.gif">');
 	},
 
@@ -698,7 +698,7 @@ var commands = exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer: <font color="#B7C21E"><b>Malk</b></font><br />' +
 						'<center>Signature Pokemon: <b>Zebstrika</b><br />' +
-						'<center>Catchphrase:idk about catchphrase though<br />' +
+						'<center>idk about catchphrase though<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/523.gif">');
 	},
 
@@ -706,7 +706,7 @@ var commands = exports.commands = {
 		if(!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer: <font color="#289F75"><b>Mater9000</b></font><br />' +
 						'<center>Signature Pokemon: <b>Linoone</b><br />' +
-						'<center>Catchphrase: linooooooooooone<br />' +
+						'<center>linooooooooooone<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/264.gif">');
 	},
 
@@ -726,7 +726,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer:<font color="#0772CF"><b>platinumCheesecake</b></font><br />' +
 						'<center>Types:Ghost(OU), Poison(NU, RU)<br />' +
 						'<center>Signature Pokemon:<font color="green"><b>Lotad</b></font><br />' +
-						'<center>Catchphrase: wait so i can put anything i want here?<br />' +
+						'<center>wait so i can put anything i want here?<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/270.gif">');
 	},
 
@@ -736,7 +736,7 @@ var commands = exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer:<font color="#2610B7"><b>blizzardq</b></font><br />' +
 						'<center>Signature Pokemon: <font color="blue"><b>Keldeo</b></font><br />' +
-						'<center>Catchphrase: こんにちは.<br />' +
+						'<center>こんにちは.<br />' +
 						'<center>PM me server/command ideas. I am a coder for Amethyst.<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/647.gif">');
 	},
@@ -746,7 +746,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer:<font color="#C11FA9"><b>miloticnob</b></font><br />' +
 						'<center>Types: Normal(OU)<br />' +
 						'<center>Signature Pokemon:<b>Chatot</b><br />' +
-						'<center>Catchphrase: aosmexy4lyf<br />' +
+						'<center>aosmexy4lyf<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/441.gif">');
 	},
 
@@ -755,7 +755,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer:<font color="#064579"><b>Kenchi</b></font><br />' +
 				  	'<center>Types: Electric(UU)<br />' +
 				  	'<center>Signature Pokemon: <font color="green"><b>Breloom</b></font><br />' +
-					'<center>Catchphrase: kek<br />' +
+					'<center>kek<br />' +
 					'<center><img src="http://www.smogon.com/download/sprites/bwmini/286.gif">');
 	},
 
@@ -764,7 +764,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer: <font color="#666C19"><b>Kunoichi</b></font><br />' +
 				  '<center>Types: Fairy(OU)<br />' +
 				  '<center>Signature Pokemon: <font color="#C11FA9"><b>Sylveon</b></font><br />' +
-				  '<center>Catchphrase: Weaklies are stronger than Strongies obv<br />' +
+				  '<center>Weaklies are stronger than Strongies obv<br />' +
 				  '<center><img src="http://www.serebii.net/pokedex-xy/icon/700.png">');
 	},
 
@@ -773,7 +773,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer:<font color="#7EC60C"><b>brooksyy</b></font><br />' +
 						'<center>Types: Dragon(OU)<br />' +
 						'<center>Signature Pokemon: <b>Kyurem-Black</b><br />' +
-						'<center>Catchphrase: Most beautiful award winner 2014<br />' +
+						'<center>Most beautiful award winner 2014<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/646-b.gif">');
 	},
 
@@ -782,7 +782,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer:<font color="#1925A3"><b>higglybiggly</b></font><br />' +
 				  '<center>Types: Dark(OU E4)<br />' +
 				  '<center>Signature Pokemon: <font color="red"><b>Bisharp</b></font><br />' +
-				  '<center>Catchphrase: when the going gets tough the tough get going<br />' +
+				  '<center>when the going gets tough the tough get going<br />' +
 				  '<center><img src="http://www.smogon.com/download/sprites/bwmini/625.gif">');
 	},
 
@@ -792,7 +792,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer:<font color="#2D2BAB"><b>CoolAsian</b></font><br />' +
 						'<center>Types: Poison(OU)<br />' +
 						'<center>Signature Pokemon: <font color="purple"><b>Gengar</b></font><br />' +
-						'<center>Catchphrase: Despair to the creeping horror of Poison-Type Pokemon!<br />' +
+						'<center> Despair to the creeping horror of Poison-Type Pokemon!<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/94.gif">');
 	},
 
@@ -801,7 +801,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer:<font color="#C51BC0"><b>GymLe@derTouchMe</b></font><br />' +
                          			 '<center>Types: Water(OU)<br />' +
 						 '<center>Signature Pokemon:<font color="#E8E23A"><b>Magikarp</b></font><br />' +
-						 '<center>Catchphrase: YOU AINT GOT NO PANCAKE MIX!<br />' +
+						 '<center>YOU AINT GOT NO PANCAKE MIX!<br />' +
 						 '<center><img src="http://www.smogon.com/download/sprites/bwmini/129.gif">');
 	},
 
@@ -809,7 +809,7 @@ var commands = exports.commands = {
 		if(!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer:<font color="#0DD3A5"><b>TrainerUmbreon</b></font><br />' +
 						'<center>Signature Pokemon:<b>Umbreon</b>' +
-						'<center>Catchphrase: Roar :)<br />' +
+						'<center>Roar :)<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/197.gif">');
 	},
 
@@ -817,7 +817,7 @@ var commands = exports.commands = {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox ('<center>Trainer:<font color="#2f651A"><b>mrSmellyfeet100</b></font><br />' +
 						'<center>Signature Pokemon: <font color="A19A9A"><b>Aggron-Mega</b></font><br />' +
-						'<center>Catchphrase: smell ya later!<br />' +
+						'<center>smell ya later!<br />' +
 						'<center><img src="http://www.serebii.net/pokedex-xy/icon/306.png">');
 	},
 
@@ -827,7 +827,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer: <font color="#0C8334"><b>Dark Girafarig</b></font><br />' +
 						'<center>Types: Fighting(OU), Water(RU), Psychic(NU E4)<br />' +
 						'<center>Signature Pokemon: <font color="#C11FA9"><b>Mew</b></font><br />' +
-						'<center>Catchphrase: How it all began... and how I\'ll begin again.<br />' +
+						'<center>How it all began... and how I\'ll begin again.<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/151.gif">');
 
 	},
@@ -837,7 +837,7 @@ var commands = exports.commands = {
       		this.sendReplyBox('<center>Trainer: <font color="#089D06"><b>Sam</b></font><br />' +
 						'<center>Types: Grass(OU)<br />' +
 						'<center>Signature Pokemon:<font color="green"><b>Breloom</b></font><br />' +
-						'<center>Catchphrase:A Thousand Die as a Million are born<br />' +
+						'<center>A Thousand Die as a Million are born<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/286.gif">');
 	},
 
@@ -846,7 +846,7 @@ var commands = exports.commands = {
      		this.sendReplyBox('<center>Trainer: <font color="#928216"><b>Ewok</b></font><br />' +
 						'<center>Types: Fire(OU), Poison(UU)<br />' +
 						'<center>Signature Pokemon:<b>Houndoom-Mega</b><br />' +
-						'<center>Catchphrase:Its better to burn out then fade away<br />' +
+						'<center>Its better to burn out then fade away<br />' +
 						'<center><img src="http://www.serebii.net/pokedex-xy/icon/229.png">');
     	},
 
@@ -856,7 +856,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer: <font color="#776C08"><b>The TurtleLord</b></font><br />' +
 						'<center>Types: Champion(OU), Ground(OU), Water(UU), Poison(RU E4)<br />' +
 						'<center>Signature Pokemon: <font color="green"><b>Torterra</b></font><br />' +
-						'<center>Catchphrase:my turtles will smash yo\' ass<br />' +
+						'<center>my turtles will smash yo\' ass<br />' +
 						'<center><a href="https://www.youtube.com/watch?v=bojx9BDpJks"><img src="http://www.smogon.com/download/sprites/bwmini/389.gif"></a>');
 	},
 
@@ -873,7 +873,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer: <font color="#1B7E15"><b>hostageclam</b></font><br />' +
 						'<center>Types: Bug(OU, UU, RU, NU)<br />' +
 						'<center>Signature Pokemon: <font color="black"><b>Pangoro</b></font><br />' +
-						'<center>Catchphrase:Get rekt Skrubb<br />' +
+						'<center>Get rekt Skrubb<br />' +
 						'<center><img src="http://www.serebii.net/pokedex-xy/icon/675.png">');
 	},
 
@@ -881,9 +881,9 @@ var commands = exports.commands = {
 	badsteel: function (target, room, user) {
 		if (!this.canBroadcast()) return;
 		this.sendReplyBox('<center>Trainer: <font color="#1823A5"><b>Bay</b></font>(<font color="#621F75"><b>BadSteel</b></font>)<br />' +
-						'<center>Types: Steel(OU), Ice(UU), Flying(RU)<br />' +
+						'<center>Types: Steel(OU), Ice(UU)<br />' +
 						'<center>Signature Pokemon: <font color="brown"><b>Shuckle</b></font><br />' +
-						'<center>Catchphrase:Never gonna give you up.<br />' +
+						'<center>Never gonna give you up.<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/213.gif">');
 	},
 
@@ -893,7 +893,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer:<font color="#051694"><b>Pidove</b></font><br />' +
 						'<center>Types: Fire(UU), Dragon(NU E4)<br />' +
 						'<center>Signature Pokemon:<font color="blue"><b>Greninja</b></font><br />' +
-						'<center>Catchphrase: get greninja\'d<br />' +
+						'<center>:get greninja\'d<br />' +
 						'<center><img src="http://www.serebii.net/pokedex-xy/icon/658.png">');
 	},
 
@@ -902,7 +902,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer: <font color="#15A20B"><b>Solor</b></font><br />' +
 						'<center>Types: Flying(OU E4), Ice(UU)<br />' +
 						'<center>Signature Pokemon: <font color="blue"><b>Gyarados</b></font><br />' +
-						'<center>Catchphrase: haters gonna hate and twerkers gonna twerk<br />' +
+						'<center>haters gonna hate and twerkers gonna twerk<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/130.gif">');
 	},
 
@@ -924,7 +924,7 @@ var commands = exports.commands = {
 							 '<center>Types: Psychic(UU)<br />' +
 							//'<center>Badge: The Crazy Badge.<br />' +
 							 '<center>Signature Pokemon:<font color="red"><b>Medicham</b></font><br />' +
-							 '<center>Catchphrase: Puppies eat waffles for breakfast<br />' +
+							 '<center>Puppies eat waffles for breakfast<br />' +
 							 '<center><a href="http://www.youtube.com/watch?v=Iyv905Q2omU"><img src="http://www.smogon.com/download/sprites/bwmini/308.gif"></a>');
 	},
 
@@ -935,7 +935,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer:<font color="#06367F"><b>EnerG218</b></font><br />' +
 						'<center>Types: /eval (OU, UU, RU, NU)<br />' +
 						'<center>Signature Pokemon: <font color="brown"><b>Buizel</b></font><br />' +
-						'<center>Catchphrase: kk<br />' +
+						'<center>kk<br />' +
 						'<center><a href="https://www.youtube.com/watch?v=AqPpqALiMMQ"><img src="http://www.smogon.com/download/sprites/bwmini/418.gif"></a>');
 	},
 
@@ -945,7 +945,7 @@ var commands = exports.commands = {
 		this.sendReplyBox('<center>Trainer: <font color="#2723A4"><b>ZacT94</b></font><br />' +
 						'<center>Types: Normal(RU)<br />' +
 						'<center>Signature Pokemon: <font color="#D9D50D"><b>Cofagrigus</b></font><br />' +
-						'<center>Catchphrase:Damn it my cat won\'t stop walking on my keyboard!<br />' +
+						'<center>Damn it my cat won\'t stop walking on my keyboard!<br />' +
 						'<center><img src="http://www.smogon.com/download/sprites/bwmini/563.gif">');
 	},
 
