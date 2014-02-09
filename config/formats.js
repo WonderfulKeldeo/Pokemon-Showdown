@@ -124,6 +124,14 @@ exports.Formats = [
 		ruleset: ['Pokemon', 'Standard Ubers', 'Team Preview'],
 		banlist: []
 	},
+
+	{
+		name: "UU (beta)",
+		section: "XY Singles",
+
+		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
+		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite', 'Heracronite', 'OU', 'BL', 'Drizzle', 'Drought']
+	},
 	{
 		name: "RU (beta)",
  		section: "XY Singles",
@@ -134,13 +142,6 @@ exports.Formats = [
  		  'Celebi','Zapdos','Manectric','Victini','Mienshao','Absol','Noiveron','Porygon2','Swampert','Chansey','Roserade','Weavile','Rotom-Heat','Ambipom','Jellicent','Cofagrigus','Tornadus-Therian','Kingdra',
  		  'Magnezone','Hawlucha','Ditto','Aerodactyl','Machamp','Hippowdon','Deoxys-Speed','Jolteon','Shuckle','Thundurus-Therian','Hitmontop','Whimsicott','Chesnaught','Exploud','Cobalion','Vaporeon','Kyurem-Black']
  	},
-	{
-		name: "UU (beta)",
-		section: "XY Singles",
-
-		ruleset: ['Pokemon', 'Standard', 'Team Preview'],
-		banlist: ['Uber', 'Soul Dew', 'Gengarite', 'Kangaskhanite', 'Heracronite', 'OU', 'BL', 'Drizzle', 'Drought']
-	},
 	{
 		name: "LC",
 		section: "XY Singles",
