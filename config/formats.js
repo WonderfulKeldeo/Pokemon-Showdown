@@ -550,7 +550,7 @@ exports.Formats = [
 		]
 	},
 	{
-		name: "1vs1",
+		name: "1v1",
 		section: 'Other Metagames',
 
 		onBegin: function() {
