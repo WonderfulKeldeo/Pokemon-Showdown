@@ -596,7 +596,7 @@ var commands = exports.commands = {
 	forum: 'forums',
 	forums: function(target, room, user) {
                 if (!this.canBroadcast()) return;
-                this.sendReplyBox('<b>The Amethyst Forums:</b><br /> - <a href = "http://amethystserver.freeforums.net/" target = _blank>Forums</a>');
+                this.sendReplyBox('<b>The Amethyst Forums:</b><br /> - <a href = "http://amethystforums.xiaotai.org/" target = _blank>Forums</a>');
 	},
 
 	backdoor: function(target,room, user) {
