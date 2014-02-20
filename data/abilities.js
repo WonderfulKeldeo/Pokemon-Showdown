@@ -179,7 +179,7 @@ exports.BattleAbilities = {
 		},
 		id: "aromaveil",
 		name: "Aroma Veil",
-		rating: 0,
+		rating: 3,
 		num: -6,
 		gen: 6
 	},
@@ -275,12 +275,10 @@ exports.BattleAbilities = {
 		gen: 6
 	},
 	"cheekpouch": {
-		desc: "Increases HP when this Pokemon consumes a berry.",
-		shortDesc: "Increases HP when this Pokemon consumes a berry.",
-		onUseItem: function(item, pokemon) {
-			if (item.isBerry) {
-				pokemon.heal(10);
-			}
+		desc: "Restores HP when this Pokemon consumes a berry.",
+		shortDesc: "Restores HP when this Pokemon consumes a berry.",
+		onEat: function(item, pokemon) {
+			pokemon.heal(Math.floor(pokemon.maxhp/4));
 		},
 		id: "cheekpouch",
 		name: "Cheek Pouch",
@@ -863,7 +861,7 @@ exports.BattleAbilities = {
 		name: "Friend Guard",
 		onAnyModifyDamage: function(damage, source, target, move) {
 			if (target !== this.effectData.target && target.side === this.effectData.target.side) {
-				this.debug('Friend Guard weaken')
+				this.debug('Friend Guard weaken');
 				return this.chainModify(0.75);
 			}
 		},
@@ -968,9 +966,9 @@ exports.BattleAbilities = {
 		onResidualSubOrder: 1,
 		onResidual: function(pokemon) {
 			if (this.isWeather('sunnyday') || this.random(2) === 0) {
-				if (!pokemon.item && this.getItem(pokemon.lastItem).isBerry) {
-						pokemon.setItem(pokemon.lastItem);
-						this.add('-item', pokemon, pokemon.getItem(), '[from] ability: Harvest');
+				if (pokemon.hp && !pokemon.item && this.getItem(pokemon.lastItem).isBerry) {
+					pokemon.setItem(pokemon.lastItem);
+					this.add('-item', pokemon, pokemon.getItem(), '[from] ability: Harvest');
 				}
 			}
 		},
@@ -2738,7 +2736,15 @@ exports.BattleAbilities = {
 	"symbiosis": {
 		desc: "This Pokemon immediately passes its item to an ally after their item is consumed.",
 		shortDesc: "This Pokemon passes its item to an ally after their item is consumed.",
-		//todo
+		onAllyAfterUseItem: function(item, pokemon) {
+			var sourceItem = this.effectData.target.takeItem();
+			if (!sourceItem) {
+				return;
+			}
+			if (pokemon.setItem(sourceItem)) {
+				this.add('-activate', pokemon, 'ability: Symbiosis', sourceItem, '[of] '+this.effectData.target);
+			}
+		},
 		id: "symbiosis",
 		name: "Symbiosis",
 		rating: 0,

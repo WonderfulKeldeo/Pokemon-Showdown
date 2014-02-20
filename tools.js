@@ -112,7 +112,9 @@ module.exports = (function () {
 	};
 	Tools.prototype.modData = function(dataType, id) {
 		if (this.isBase) return this.data[dataType][id];
-		if (this.data[dataType][id] !== moddedTools.base.data[dataType][id]) return this.data[dataType][id];
+		var parentMod = this.data.Scripts.inherit;
+		if (!parentMod) parentMod = 'base';
+		if (this.data[dataType][id] !== moddedTools[parentMod].data[dataType][id]) return this.data[dataType][id];
 		return this.data[dataType][id] = Object.clone(this.data[dataType][id], true);
 	};
 
@@ -468,16 +470,17 @@ module.exports = (function () {
 					banlistTable[toId(subformat.banlist[i])] = subformat.name || true;
 
 					var plusPos = subformat.banlist[i].indexOf('+');
+					var complexList;
 					if (plusPos && plusPos > 0) {
 						var plusPlusPos = subformat.banlist[i].indexOf('++');
 						if (plusPlusPos && plusPlusPos > 0) {
-							var complexList = subformat.banlist[i].split('++');
+							complexList = subformat.banlist[i].split('++');
 							for (var j=0; j<complexList.length; j++) {
 								complexList[j] = toId(complexList[j]);
 							}
 							format.teamBanTable.push(complexList);
 						} else {
-							var complexList = subformat.banlist[i].split('+');
+							complexList = subformat.banlist[i].split('+');
 							for (var j=0; j<complexList.length; j++) {
 								complexList[j] = toId(complexList[j]);
 							}
@@ -638,7 +641,12 @@ module.exports = (function () {
 		var ret = Object.create(tools);
 		tools.install(ret);
 		if (ret.init) {
-			ret.init();
+			if (parentMod && ret.init === moddedTools[parentMod].data.Scripts.init) {
+				// don't inherit init
+				delete ret.init;
+			} else {
+				ret.init();
+			}
 		}
 		return ret;
 	};

@@ -152,7 +152,7 @@
 	/*global.string = function(str) {
 		if (typeof str === 'string' || typeof str === 'number') return ''+str;
 		return '';
-	}
+	};
 
 	global.Tools = require('./tools.js');
 
@@ -173,7 +173,7 @@
 		if (!validators[format]) validators[format] = new Validator(format);
 		var parsedTeam = {};
 		try {
-			var parsedTeam = JSON.parse(message.substr(pipeIndex2 + 1));
+			parsedTeam = JSON.parse(message.substr(pipeIndex2 + 1));
 		} catch (e) {
 			respond(id, false, "Your team was invalid and could not be parsed.");
 			return;
@@ -500,7 +500,7 @@ var Validator = (function() {
 			}
 			if (!lsetData.sources && lsetData.sourcesBefore >= 3 && (isHidden || tools.gen <= 5) && template.gen <= lsetData.sourcesBefore) {
 				var oldAbilities = tools.mod('gen'+lsetData.sourcesBefore).getTemplate(set.species).abilities;
-				if (ability.name !== oldAbilities['0'] && ability.name !== oldAbilities['1'] && ability.name !== oldAbilities['H']) {
+				if (ability.name !== oldAbilities['0'] && ability.name !== oldAbilities['1'] && !oldAbilities['H']) {
 					problems.push(name+" has moves incompatible with its ability.");
 				}
 			}
@@ -549,6 +549,10 @@ var Validator = (function() {
 		var alreadyChecked = {};
 		var level = set.level || 100;
 
+		var isHidden = false;
+		if (set.ability && tools.getAbility(set.ability).name === template.abilities['H']) isHidden = true;
+		var incompatibleHidden = false;
+
 		var limit1 = true;
 		var sketch = false;
 
@@ -594,6 +598,11 @@ var Validator = (function() {
 						var learned = lset[i];
 						if (noPastGen && learned.charAt(0) !== '6') continue;
 						if (parseInt(learned.charAt(0),10) > tools.gen) continue;
+						if (isHidden && !tools.mod('gen'+learned.charAt(0)).getTemplate(template.species).abilities['H']) {
+							// check if the Pokemon's hidden ability was available
+							incompatibleHidden = true;
+							continue;
+						}
 						if (!template.isNonstandard) {
 							// HMs can't be transferred
 							if (tools.gen >= 4 && learned.charAt(0) <= 3 && move in {'cut':1, 'fly':1, 'surf':1, 'strength':1, 'flash':1, 'rocksmash':1, 'waterfall':1, 'dive':1}) continue;
@@ -719,16 +728,18 @@ var Validator = (function() {
 		// Now that we have our list of possible sources, intersect it with the current list
 		if (!sourcesBefore && !sources.length) {
 			if (noPastGen && sometimesPossible) return {type:'pokebank'};
+			if (incompatibleHidden) return {type:'incompatible'};
 			return true;
 		}
 		if (!sources.length) sources = null;
 		if (sourcesBefore || lsetData.sourcesBefore) {
 			// having sourcesBefore is the equivalent of having everything before that gen
 			// in sources, so we fill the other array in preparation for intersection
+			var learned;
 			if (sourcesBefore && lsetData.sources) {
 				if (!sources) sources = [];
 				for (var i=0, len=lsetData.sources.length; i<len; i++) {
-					var learned = lsetData.sources[i];
+					learned = lsetData.sources[i];
 					if (parseInt(learned.substr(0,1),10) <= sourcesBefore) {
 						sources.push(learned);
 					}
@@ -738,7 +749,7 @@ var Validator = (function() {
 			if (lsetData.sourcesBefore && sources) {
 				if (!lsetData.sources) lsetData.sources = [];
 				for (var i=0, len=sources.length; i<len; i++) {
-					var learned = sources[i];
+					learned = sources[i];
 					if (parseInt(learned.substr(0,1),10) <= lsetData.sourcesBefore) {
 						lsetData.sources.push(learned);
 					}
