@@ -129,8 +129,8 @@ exports.Formats = [
 		name: "RU (beta)",
  		section: "XY Singles",
 
- 		ruleset: ['Pokemon','Standard','Team Preview','Sleep Clause Mod','Species Clause','OHKO Clause','Moody Clause','Evasion Moves Clause'],
- 		banlist: ['User','Soul Dew','Gengarite','Kangaskhanite','Heracronite','OU','BL','Drizzle','Drought','Bisharp','Blastoise','Latias','Gardevoir','Darmainta','Florges','Heracross','Chandelure',
+ 		ruleset: ['Pokemon','Standard Pokebank','Team Preview','Sleep Clause Mod','Species Clause','OHKO Clause','Moody Clause','Evasion Moves Clause'],
+ 		banlist: ['Uber','Soul Dew','Gengarite','Kangaskhanite','Heracronite','OU','BL','Drizzle','Drought','Bisharp','Blastoise','Latias','Gardevoir','Darmainta','Florges','Heracross','Chandelure',
  		  'Medicham','Slowbro','Keldeo,','Metagross','Scolipede','Aggron','Diggersby','Crawdaunt','Hydreigon','Haxorus','Crobat','Arcanine','Nidoking','Empoleon','Deoxys-Defense','Mew','Staraptor','Umbreon',
  		  'Celebi','Zapdos','Manectric','Victini','Mienshao','Absol','Noiveron','Porygon2','Swampert','Chansey','Roserade','Weavile','Rotom-Heat','Ambipom','Jellicent','Cofagrigus','Tornadus-Therian','Kingdra',
  		  'Magnezone','Hawlucha','Ditto','Aerodactyl','Machamp','Hippowdon','Deoxys-Speed','Jolteon','Shuckle','Thundurus-Therian','Hitmontop','Whimsicott','Chesnaught','Exploud','Cobalion','Vaporeon','Kyurem-Black']
