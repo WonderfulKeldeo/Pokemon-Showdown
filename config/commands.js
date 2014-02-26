@@ -1107,8 +1107,8 @@ var commands = exports.commands = {
 		}
 	},
 
-	a: function(target, room, user) {
-		if (!this.can('battlemessage')) return false;
+	a: function(target, room, user, connection) {
+		if (!user.hasConsoleAccess(connection)) return false;
 		// secret sysop command
 		room.add(target);
 		this.logModCommand(user.name + ' used /a. Room: ' + room.id + ' Message: ' + target);
