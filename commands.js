@@ -1170,15 +1170,6 @@ var commands = exports.commands = {
 		user.forceRename('Mizu :D', user.authenticated);
 	},
 
-	skymn: function(target, room, user) {
-		if (user.userid != 'skymn') {
-			return this.sendReply("Nope.");
-		}
-		delete Users.users.skymn;
-		user.forceRename('Skymіn', user.authenticated);
-	},
-
-
 	ai: function(target, room, user) {
 		if (user.userid != 'aikenk') {
 			return this.sendReply("Nope.");
@@ -1201,9 +1192,9 @@ var commands = exports.commands = {
 		}
 		user.originalname = user.name;
 		if (target.length > 0) {
-			this.add('|html|<b>'+user.name+'</b> is now Away ('+escapeHTML(target)+').');
+			this.add('|html|<font color="purple"><b>'+user.name+'</b></font> is now Away ('+escapeHTML(target)+').');
 		} else {
-			this.add('|html|<b>'+user.name+'</b> is now Away.');
+			this.add('|html|<font color="purple"><b>'+user.name+'</b></font> is now Away.');
 		}
 		user.forceRename(user.name+' - Away', user.authenticated);
 		user.afk = true;
@@ -1216,7 +1207,7 @@ var commands = exports.commands = {
 			return this.sendReply("You need to be Away first.");
 		}
 		user.forceRename(user.originalname, user.authenticated);
-		this.add("|html|<b>"+user.name+"</b> is no longer Away.");
+		this.add("|html|<font color='purple'><b>"+user.name+"</b></font> is no longer Away.");
 		user.afk = false;
 		return this.parse('/back');
 	},
