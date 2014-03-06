@@ -52,17 +52,10 @@ global.toUserid = toId;
 /**
  * Validates a username or Pokemon nickname
  */
-var bannedNameStartChars = {'~':1, '&':1, '@':1, '%':1, '+':1, '-':1, '!':1, '?':1, '#':1, ' ':1};
 global.toName = function(name) {
 	name = string(name);
 	name = name.replace(/[\|\s\[\]\,]+/g, ' ').trim();
-	while (bannedNameStartChars[name.charAt(0)]) {
-		name = name.substr(1);
-	}
-	if (name.length > 18) name = name.substr(0,18);
-	if (config.namefilter) {
-		name = config.namefilter(name);
-	}
+	if (name.length > 18) name = name.substr(0,18).trim();
 	return name;
 };
 
@@ -1029,9 +1022,8 @@ var BattlePokemon = (function() {
 		if (noForce && this.ability === ability.id) {
 			return false;
 		}
-		if (ability.id === 'multitype' || ability.id === 'illusion' || ability.id === 'stancechange' || this.ability === 'multitype') {
-			return false;
-		}
+		if (ability.id in {illusion:1, multitype:1, stancechange:1}) return false;
+		if (this.ability in {multitype:1, stancechange:1}) return false;
 		this.ability = ability.id;
 		this.abilityData = {id: ability.id, target: this};
 		if (ability.id) {
@@ -1413,7 +1405,7 @@ var Battle = (function() {
 		this.messageLog = [];
 
 		// use a random initial seed (64-bit, [high -> low])
-		this.seed = [Math.floor(Math.random() * 0x10000),
+		this.startingSeed = this.seed = [Math.floor(Math.random() * 0x10000),
 			Math.floor(Math.random() * 0x10000),
 			Math.floor(Math.random() * 0x10000),
 			Math.floor(Math.random() * 0x10000)];
@@ -1821,7 +1813,7 @@ var Battle = (function() {
 			return relayVar;
 		}
 		if (target.ignore && target.ignore[effect.effectType]) {
-			this.debug(eventid+' handler suppressed by Klutz or Magic Room');
+			this.debug(eventid+' handler suppressed by Gastro Acid, Klutz or Magic Room');
 			return relayVar;
 		}
 		if (target.ignore && target.ignore[effect.effectType+'Target']) {
@@ -2028,7 +2020,7 @@ var Battle = (function() {
 				}
 			} else if (thing.ignore && thing.ignore[status.effectType]) {
 				if (eventid !== 'ModifyPokemon' && eventid !== 'Update') {
-					this.debug(eventid+' handler suppressed by Klutz or Magic Room');
+					this.debug(eventid+' handler suppressed by Gastro Acid, Klutz or Magic Room');
 				}
 				continue;
 			}
@@ -2923,7 +2915,11 @@ var Battle = (function() {
 			baseDamage = this.modify(baseDamage, move.stab || 1.5);
 		}
 		// types
-		var totalTypeMod = this.getEffectiveness(move, target, pokemon);
+		var totalTypeMod = 0;
+
+		if (target.negateImmunity[move.type] !== 'IgnoreEffectiveness' || this.getImmunity(move.type, target)) {
+			totalTypeMod = this.getEffectiveness(move, target, pokemon);
+		}
 
 		totalTypeMod = clampIntRange(totalTypeMod, -3, 3);
 		if (totalTypeMod > 0) {
@@ -3781,7 +3777,7 @@ var Battle = (function() {
 		case 'join':
 			var team = null;
 			try {
-				if (more) team = JSON.parse(more);
+				if (more) team = Tools.fastUnpackTeam(more);
 			} catch (e) {
 				console.log('TEAM PARSE ERROR: '+more);
 				team = null;
