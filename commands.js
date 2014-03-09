@@ -82,12 +82,12 @@ var commands = exports.commands = {
 			return this.sendReply("You are already registered for the Amethyst OU League.");
 		}
 		if (!target) {
-			return this.sendReply('/registerleagueou [Pokemon 1,2,3,4,5,6] - Register for the Amethyst OU League.');
+			return this.sendReply('/rlou [Pokemon 1,2,3,4,5,6] - Register for the Amethyst OU League.');
 		}
 		target = target.toLowerCase();
 		target = target.split(',');
 		if (target.length < 6) {
-			return this.sendReply('/registerleagueou [Pokemon 1,2,3,4,5,6] - Register for the Amethyst OU League.');
+			return this.sendReply('/rlou [Pokemon 1,2,3,4,5,6] - Register for the Amethyst OU League.');
 		}
 		var pokemonNames = [];
 		for (var i = 0; i < target.length; i++) {
@@ -103,7 +103,8 @@ var commands = exports.commands = {
 			pokemonNames.push(pokemon.species);
 		}
 		league.write('\n'+user.name+'\'s team: '+pokemonNames.join(', '));
-		return this.sendReply('Your team of '+pokemonNames.join(', ')+' has been submitted successfully. You may now challenge Gym Leaders.');
+		this.sendReply('Your team of '+pokemonNames.join(', ')+' has been submitted successfully. You may now challenge Gym Leaders.');
+		return this.parse('/ougl');
 	},
 
 	registerleagueuu: 'rluu',
@@ -113,12 +114,12 @@ var commands = exports.commands = {
 			return this.sendReply("You are already registered for the Amethyst UU League.");
 		}
 		if (!target) {
-			return this.sendReply('/registerleagueuu [Pokemon 1,2,3,4,5,6] - Register for the Amethyst UU League.');
+			return this.sendReply('/rluu [Pokemon 1,2,3,4,5,6] - Register for the Amethyst UU League.');
 		}
 		target = target.toLowerCase();
 		target = target.split(',');
 		if (target.length < 6) {
-			return this.sendReply('/registerleagueuu [Pokemon 1,2,3,4,5,6] - Register for the Amethyst UU League.');
+			return this.sendReply('/rluu [Pokemon 1,2,3,4,5,6] - Register for the Amethyst UU League.');
 		}
 		var pokemonNames = [];
 		for (var i = 0; i < target.length; i++) {
@@ -134,7 +135,8 @@ var commands = exports.commands = {
 			pokemonNames.push(pokemon.species);
 		}
 		leagueuu.write('\n'+user.name+'\'s team: '+pokemonNames.join(', '));
-		return this.sendReply('Your team of '+pokemonNames.join(', ')+' has been submitted successfully. You may now challenge Gym Leaders.');
+		this.sendReply('Your team of '+pokemonNames.join(', ')+' has been submitted successfully. You may now challenge Gym Leaders.');
+		return this.parse('/uugl');
 	},
 
 	viewleague: function(target, room, user) {
@@ -209,7 +211,7 @@ var commands = exports.commands = {
 	gumiho: function(target, room, user) {
 		if (!this.canBroadcast()) return;
 		if (room.id != 'garlikksfineestablishment') {
-			return this.sendReply("Nope.");
+			return this.sendReply('Nope.');
 		}
 		this.sendReplyBox('<center><img src="http://i460.photobucket.com/albums/qq329/cgpb21/gif/tumblr_ll643iyJFH1qhw7pyo1_400.gif">');
 	},
