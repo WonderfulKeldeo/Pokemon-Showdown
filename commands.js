@@ -890,9 +890,10 @@ kozman: 'koz',
                 if (!this.canBroadcast()) return;
                 this.sendReplyBox('<center>Trainer: <font color="#1823A5"><b>Bay</b></font>(<font color="#621F75"><b>BadSteel</b></font>)<br />' +
                                                 '<center>Types: Steel(OU)<br />' +
-                                                '<center>Signature Pokemon: <font color="brown"><b>Shuckle</b></font><br />' +
-                                                '<center>Never gonna give you up.<br />' +
-                                                '<center><img src="http://www.smogon.com/download/sprites/bwmini/213.gif">');
+                                                '<center>Signature Pokemon: <font color="brown"><b>Tauros</b></font><br />' +
+                                                '<center>Wait...who are you?<br />' +
+                                                '<center><a href="https://www.youtube.com/watch?v=ChWK9RcG1gY">Battle Theme</a><br />' +
+                                                '<center><img src="http://play.pokemonshowdown.com/sprites/xyani/tauros.gif">');
         },
  
         nubdove: 'pidove',
