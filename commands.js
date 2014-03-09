@@ -751,6 +751,7 @@ kozman: 'koz',
                                                 '<center>Types: Normal(OU)<br />' +
                                                 '<center>Signature Pokemon:<b>Chatot</b><br />' +
                                                 '<center>aosmexy4lyf<br />' +
+                                                '<center><a href=" https://www.youtube.com/watch?v=xf-QTw615b4&feature=youtu.be&t=38s">Battle Theme</a><br />' +
                                                 '<center><img src="http://www.smogon.com/download/sprites/bwmini/441.gif">');
         },
  
