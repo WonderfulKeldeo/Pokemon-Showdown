@@ -861,7 +861,7 @@ kozman: 'koz',
         tl: function (target, room, user) {
                 if (!this.canBroadcast()) return;
                 this.sendReplyBox('<center>Trainer: <font color="#776C08"><b>The TurtleLord</b></font><br />' +
-                                                '<center>Types: Champion(OU), Ground(OU), Water(UU), Poison(RU E4)<br />' +
+                                                '<center>Types: Ground(OU), Water(UU), Flying(RU E4)<br />' +
                                                 '<center>Signature Pokemon: <font color="green"><b>Torterra</b></font><br />' +
                                                 '<center>my turtles will smash yo\' ass<br />' +
                                                 '<center><a href=" https://www.youtube.com/watch?v=xRQnJyP77tY&feature=kp">Battle Theme</a><br />' +
