@@ -894,7 +894,7 @@ kozman: 'koz',
                                                 '<center>Signature Pokemon: <font color="brown"><b>Tauros</b></font><br />' +
                                                 '<center>Wait...who are you?<br />' +
                                                 '<center><a href="https://www.youtube.com/watch?v=ChWK9RcG1gY">Battle Theme</a><br />' +
-                                                '<center><img src="http://www.serebii.net/pokedex-xy/icon/128.png">');
+                                                '<center><img src="http://play.pokemonshowdown.com/sprites/xyani/tauros.gif" width="45px" height="45px">');
         },
  
         nubdove: 'pidove',
