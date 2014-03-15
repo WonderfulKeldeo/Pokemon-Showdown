@@ -800,6 +800,7 @@ var commands = exports.commands = {
 			'- /hourmute OR /hm <em>username</em>: 60 minute mute<br />' +
 			'- /unmute <em>username</em>: unmute<br />' +
 			'- /announce OR /wall <em>message</em>: make an announcement<br />' +
+			'- /modlog <em>username</em>: search the moderator log of the room<br />' +
 			'<br />' +
 			'Room moderators (@) can also use:<br />' +
 			'- /roomban OR /rb <em>username</em>: bans user from the room<br />' +
@@ -884,7 +885,7 @@ var commands = exports.commands = {
 		}
 		if (target === 'all' || target === 'autoconfirmed' || target === 'ac') {
 			matched = true;
-			buffer += 'A user is autoconfirmed when they have won at least one rated battle and has been registered for a week or longer.<br />';
+			buffer += 'A user is autoconfirmed when they have won at least one rated battle and have been registered for a week or longer.<br />';
 		}
 		if (!matched) {
 			return this.sendReply('The FAQ entry "'+target+'" was not found. Try /faq for general help.');
@@ -1304,7 +1305,7 @@ var commands = exports.commands = {
 			matched = true;
 			this.sendReply('/requestavatar [URL] - Requests an avatar to be added for the user. Requires: + % @ & ~');
 		}
-		if (target === '%' || target === 'invite') {
+		if (target === 'all' || target === 'invite') {
 			matched = true;
 			this.sendReply('/invite [username], [roomname] - Invites the player [username] to join the room [roomname].');
 		}
