@@ -595,6 +595,11 @@ var commands = exports.commands = {
 	/*********************************************************
 	 * Other assorted Amethyst commands
 	 *********************************************************/
+	picktier: 'tierpick',
+	tierpick: function(target, room, user){
+		return this.parse('/poll Vote for the next Tournament Tier,randombattle,ou,ubers,uu,ru,nu,lc,cap,cc1v1,oumonotype,1v1,smogondoubles,vgcdoubles');
+	},
+	
 	forum: 'forums',
 	forums: function(target, room, user) {
                 if (!this.canBroadcast()) return;
