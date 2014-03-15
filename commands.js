@@ -987,14 +987,14 @@ kozman: 'koz',
 	ougl: 'ouleaders',
 	ouleaders: function(target, room, user) {
 		if(!this.canBroadcast()) return;
-		this.sendReplyBox('A list of the active Amethyst OU leaders can be found <a href = " http://pastebin.com/9xKgfMzn" target = _blank>here</a> or <a href = "http://amethystforums.xiaotai.org/showthread.php?tid=7" target = _blank>here</a>.');
+		this.sendReplyBox('A list of the active Amethyst OU leaders can be found <a href ="http://pastebin.com/4Vq73sst" target = _blank>here</a>, <a href="http://pastebin.com/9xKgfMzn" target = _blank>here</a>, or <a href = "http://amethystforums.xiaotai.org/showthread.php?tid=7" target = _blank>here</a>.');
 	},
 
 	uugymleaders: 'uuleaders',
 	uugl: 'uuleaders',
 	uuleaders: function(target, room, user) {
 		if(!this.canBroadcast()) return;
-		this.sendReplyBox('A list of the active Amethyst UU leaders can be found <a href = "http://pastebin.com/2EwGFFEW" target = _blank>here</a> or <a href = "http://amethystforums.xiaotai.org/showthread.php?tid=12&pid=18#pid18" target = _blank>here</a>.');
+		this.sendReplyBox('A list of the active Amethyst UU leaders can be found <a href = "http://pastebin.com/2EwGFFEW" target = _blank>here</a> or <a href ="http://amethystforums.xiaotai.org/showthread.php?tid=12&pid=18#pid18" target = _blank>here</a>.');
 	},
 
 	rugymleaders: 'ruleaders',
