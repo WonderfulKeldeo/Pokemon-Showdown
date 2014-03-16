@@ -1046,6 +1046,14 @@ var cmds = {
 		tour[room.id].answerList = answers;
 		room.addRaw('<div class="infobox"><h2>' + tour[room.id].question + separacion + '<font size=2 color = "#939393"><small>/vote OPTION<br /><i><font size=1>Poll started by '+user.name+'</font size></i></small></font></h2><hr />' + separacion + separacion + " &bull; " + tour[room.id].answerList.join(' &bull; ') + '</div>');
 	},
+	
+	alltour: function(target, room, user) {
+		var tours = [];
+		for (x in tour.tiers) {
+			tours.push(tour.tiers[x]);
+		}
+		return this.parse('/poll Tier?,'+tours.join(','));
+	},
 
 	vote: function(target, room, user) {
 		var ips = JSON.stringify(user.ips);
